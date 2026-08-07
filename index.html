@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento Jurídico - Direito do Consumidor</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            padding: 30px;
+            border-top: 5px solid #1e3a8a;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 6px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #1e3a8a;
+        }
+
+        button {
+            width: 100%;
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #1ebc57;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 11px;
+            color: #888;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Problemas com Direitos do Consumidor?</h1>
+        <p>Preencha os dados abaixo para passar pelo pré-atendimento rápido via WhatsApp.</p>
+    </div>
+
+    <form id="leadForm">
+        <div class="form-group">
+            <label for="nome">Seu Nome Completo:</label>
+            <input type="text" id="nome" placeholder="Ex.: Maria Silva" required>
+        </div>
+
+        <div class="form-group">
+            <label for="problema">Qual o seu problema principal?</label>
+            <select id="problema" required>
+                <option value="">Selecione uma opção...</option>
+                <option value="Nome Negativado Indevidamente">Nome Negativado / Indevido</option>
+                <option value="Empréstimo Não Solicitado / RMC">Empréstimo Não Solicitado (RMC)</option>
+                <option value="Problemas com Voo / Bagagem">Problemas com Voo ou Bagagem</option>
+                <option value="Cobrança Indevida / Cartão">Cobrança Indevida no Cartão/Banco</option>
+                <option value="Outro assunto">Outro problema de consumo</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="documentos">Possui comprovantes/documentos?</label>
+            <select id="documentos" required>
+                <option value="Sim">Sim, tenho tudo documentado</option>
+                <option value="Alguns">Tenho apenas alguns papéis/prints</option>
+                <option value="Não">Não tenho no momento</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="detalhes">Resumo rápido do ocorrido:</label>
+            <textarea id="detalhes" rows="3" placeholder="Descreva brevemente o que aconteceu..." required></textarea>
+        </div>
+
+        <button type="button" onclick="enviarWhatsApp()">
+            Falar no WhatsApp Agora
+        </button>
+    </form>
+
+    <div class="footer-note">
+        🔒 Seus dados estão protegidos de acordo com a LGPD.<br>
+        Atendimento informativo referente ao Provimento 205/2021 da OAB.
+    </div>
+</div>
+
+<script>
+    function enviarWhatsApp() {
+        // INSIRA O SEU NÚMERO DE WHATSAPP AQUI (Com DDD e código do país 55)
+        const numeroWhatsapp = "5513991749820";
+
+        const nome = document.getElementById('nome').value;
+        const problema = document.getElementById('problema').value;
+        const documentos = document.getElementById('documentos').value;
+        const detalhes = document.getElementById('detalhes').value;
+
+        if (!nome || !problema || !detalhes) {
+            alert("Por favor, preencha todos os campos do formulário.");
+            return;
+        }
+
+        // Formatação da mensagem enviada para o WhatsApp
+        const mensagem = `*Novo Pré-Atendimento Jurídico*%0A%0A` +
+            `*Nome:* ${encodeURIComponent(nome)}%0A` +
+            `*Problema:* ${encodeURIComponent(problema)}%0A` +
+            `*Possui Documentos:* ${encodeURIComponent(documentos)}%0A` +
+            `*Resumo:* ${encodeURIComponent(detalhes)}`;
+
+        // Abre a conversa no WhatsApp diretamente
+        window.open(`https://wa.me/${numeroWhatsapp}?text=${mensagem}`, '_blank');
+    }
+</script>
+
+</body>
+</html>
