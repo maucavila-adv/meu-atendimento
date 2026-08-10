@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atendimento Jurídico - Direito do Consumidor</title>
+    <title>Escritório Ávila - Proteção Financeira do Consumidor</title>
     <style>
         * {
             box-sizing: border-box;
@@ -41,13 +41,23 @@
         .header h1 {
             font-size: 22px;
             color: #1e3a8a;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             font-weight: 700;
         }
 
-        .header p {
+        .header h2 {
             font-size: 14px;
+            color: #555;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .header p {
+            font-size: 13px;
             color: #666;
+            background: #edf2f7;
+            padding: 10px;
+            border-radius: 6px;
         }
 
         .form-group {
@@ -102,6 +112,7 @@
             font-size: 11px;
             color: #888;
             margin-top: 15px;
+            line-height: 1.4;
         }
     </style>
 </head>
@@ -109,8 +120,9 @@
 
 <div class="container">
     <div class="header">
-        <h1>Problemas com Direitos do Consumidor?</h1>
-        <p>Preencha os dados abaixo para passar pelo pré-atendimento rápido via WhatsApp.</p>
+        <h1>ESCRITÓRIO ÁVILA</h1>
+        <h2>Proteção Financeira do Consumidor</h2>
+        <p>Análise de prejuízos com Bancos, Financeiras e Planos de Saúde. Preencha abaixo para iniciar no WhatsApp.</p>
     </div>
 
     <form id="leadForm">
@@ -123,30 +135,30 @@
             <label for="problema">Qual o seu problema principal?</label>
             <select id="problema" required>
                 <option value="">Selecione uma opção...</option>
-                <option value="Nome Negativado Indevidamente">Nome Negativado / Indevido</option>
-                <option value="Empréstimo Não Solicitado / RMC">Empréstimo Não Solicitado (RMC)</option>
-                <option value="Problemas com Voo / Bagagem">Problemas com Voo ou Bagagem</option>
-                <option value="Cobrança Indevida / Cartão">Cobrança Indevida no Cartão/Banco</option>
-                <option value="Outro assunto">Outro problema de consumo</option>
+                <option value="Fraudes Bancarias / Golpe do PIX">Fraudes Bancárias / Golpe do PIX / Falsa Central</option>
+                <option value="Credito Consignado / RMC">Empréstimo Consignado Não Solicitado / RMC</option>
+                <option value="Plano de Saude / Negativa">Negativa do Plano de Saúde (Exame/Cirurgia/Remédio)</option>
+                <option value="Cobranca Indevida / Banco">Cobrança Indevida ou Conta Invasão</option>
+                <option value="Outro Assunto">Outro problema com banco ou saúde</option>
             </select>
         </div>
 
         <div class="form-group">
             <label for="documentos">Possui comprovantes/documentos?</label>
             <select id="documentos" required>
-                <option value="Sim">Sim, tenho tudo documentado</option>
-                <option value="Alguns">Tenho apenas alguns papéis/prints</option>
-                <option value="Não">Não tenho no momento</option>
+                <option value="Sim">Sim, tenho contratos/extratos/boletim</option>
+                <option value="Alguns">Tenho apenas alguns prints/comprovantes</option>
+                <option value="Nao">Não tenho no momento</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label for="detalhes">Resumo rápido do ocorrido:</label>
-            <textarea id="detalhes" rows="3" placeholder="Descreva brevemente o que aconteceu..." required></textarea>
+            <label for="detalhes">Resumo rápido do seu caso:</label>
+            <textarea id="detalhes" rows="3" placeholder="Descreva brevemente o que aconteceu com o banco ou plano de saúde..." required></textarea>
         </div>
 
         <button type="button" onclick="enviarWhatsApp()">
-            Falar no WhatsApp Agora
+            ANALISAR MEU CASO PELO WHATSAPP
         </button>
     </form>
 
@@ -158,8 +170,8 @@
 
 <script>
     function enviarWhatsApp() {
-        // INSIRA O SEU NÚMERO DE WHATSAPP AQUI (Com DDD e código do país 55)
-        const numeroWhatsapp = "5513991749820";
+        // ATENÇÃO: Altere os números abaixo pelo SEU número real com DDD (Exemplo: 55 + DDD + Numero)
+        const numeroSeuWhatsapp = "5513991749820";
 
         const nome = document.getElementById('nome').value;
         const problema = document.getElementById('problema').value;
@@ -167,19 +179,19 @@
         const detalhes = document.getElementById('detalhes').value;
 
         if (!nome || !problema || !detalhes) {
-            alert("Por favor, preencha todos os campos do formulário.");
+            alert("Por favor, preencha todos os campos do formulário antes de continuar.");
             return;
         }
 
-        // Formatação da mensagem enviada para o WhatsApp
-        const mensagem = `*Novo Pré-Atendimento Jurídico*%0A%0A` +
+        // Formatação da mensagem que chegará no seu WhatsApp
+        const mensagem = `*Solicitação de Análise - Escritório Ávila*%0A%0A` +
             `*Nome:* ${encodeURIComponent(nome)}%0A` +
             `*Problema:* ${encodeURIComponent(problema)}%0A` +
             `*Possui Documentos:* ${encodeURIComponent(documentos)}%0A` +
-            `*Resumo:* ${encodeURIComponent(detalhes)}`;
+            `*Resumo do Caso:* ${encodeURIComponent(detalhes)}`;
 
-        // Abre a conversa no WhatsApp diretamente
-        window.open(`https://wa.me/${numeroWhatsapp}?text=${mensagem}`, '_blank');
+        // Abre a conversa diretamente no seu WhatsApp
+        window.open(`https://wa.me/${numeroSeuWhatsapp}?text=${mensagem}`, '_blank');
     }
 </script>
 
