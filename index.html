@@ -3,38 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Maurício Ávila Advocacia | Proteção Financeira do Consumidor</title>
-    <!-- Google Fonts & Font Awesome Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Dr. Maurício Ávila | Advogado Especialista em Defesa do Consumidor</title>
+    <!-- Fonte e Ícones (FontAwesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
+        /* CSS Básico e Elegante para Advocacia */
         :root {
-            --primary-navy: #0b1d3a;
-            --primary-dark: #071326;
-            --accent-gold: #c5a059;
-            --accent-gold-hover: #b08d46;
-            --accent-green: #25d366;
-            --accent-green-hover: #1ebc57;
-            --bg-light: #f4f6f9;
-            --card-bg: #ffffff;
-            --text-main: #1f2937;
-            --text-muted: #6b7280;
-            --border-color: #e5e7eb;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            scroll-behavior: smooth;
+            --primary: #1a2530;
+            --accent: #d4af37;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
         }
 
         body {
-            background-color: var(--bg-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .oab-badge {
+            font-size: 0.9rem;
+            background-color: rgba(212, 175, 55, 0.2);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--accent);
+            color: #fff;
+        }
+
+        /* Seção Principal / Sobre */
+        .hero-section {
+            padding: 60px 5%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            background-color: var(--light);
+        }
+
+        .about-image-frame {
+            width: 280px;
+            height: 350px;
+            border: 3px solid var(--accent);
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            overflow: hidden;
+            background-color: #e0e0e0;
+        }
+
+        .about-content {
+            max-width: 600px;
+        }
+
+        .about-content h2 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 0;
+        }
+
+        .contact-info {
+            margin: 20px 0;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25d366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+            transition: background 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1eb854;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 30px 5% 15px;
+            border-top: 3px solid var(--accent);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <h1>Dr. Maurício Ávila</h1>
+        <span class="oab-badge">OAB/SP 551.435</span>
+    </header>
+
+    <!-- SEÇÃO SOBRE / HERÓI -->
+    <section class="hero-section">
+        
+        <!-- FOTO DO PERFIL -->
+        <div class="about-image-frame">
+            <!-- Substitua "minha-foto.jpg" pelo nome exato do seu arquivo de imagem -->
+            <img src="minha-foto.jpg" alt="Dr. Maurício Ávila" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+
+        <!-- INFORMAÇÕES DE APRESENTAÇÃO E CONTATO -->
+        <div class="about-content">
+            <h2>Dr. Maurício Ávila</h2>
+            <p class="subtitle">Advogado Especialista em Defesa do Consumidor</p>
+            <p>Atuação especializada na defesa e garantia dos direitos do consumidor, oferecendo atendimento jurídico personalizado, transparente e ágil.</p>
+            
+            <div class="contact-info">
+                <p>
+                    <i class="fa-solid fa-id-card" style="color: var(--accent);"></i> 
+                    <strong>OAB/SP nº 551.435</strong>
+                </p>
+                <p>
+                    <i class="fa-solid fa-envelope" style="color: var(--accent);"></i> 
+                    <a href="mailto:maucavila@adv.oabsp.org.br">maucavila@adv.oabsp.org.br</a>
+                </p>
+            </div>
+
+            <!-- BOTÃO DO WHATSAPP -->
+            <!-- Substitua o número 5511999999999 pelo seu número real com DDD -->
+            <a href="https://wa.me/5511999999999?text=Olá,%20Dr.%20Maurício.%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20consulta." class="btn-whatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Falar pelo WhatsApp
+            </a>
+        </div>
+
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="footer-content">
+            <h3>Dr. Maurício Ávila — Advocacia</h3>
+            <p>Inscrição Ordem dos Advogados do Brasil: <strong>OAB/SP 551.435</strong></p>
+            <p>E-mail: <a href="mailto:maucavila@adv.oabsp.org.br">maucavila@adv.oabsp.org.br</a></p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; Todos os direitos reservados — Dr. Maurício Ávila</p>
+        </div>
+    </footer>
+
+</body>
+</html>            background-color: var(--bg-light);
             color: var(--text-main);
             line-height: 1.6;
         }
