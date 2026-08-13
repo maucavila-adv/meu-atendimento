@@ -4,224 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Maurício Ávila | Advogado Especialista em Defesa do Consumidor</title>
-    <!-- Fonte e Ícones (FontAwesome) -->
+    
+    <!-- Ícones FontAwesome e Fonte Google -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
     <style>
-        /* CSS Básico e Elegante para Advocacia */
+        /* CSS ORGANIZADO E SEM ERROS */
         :root {
-            --primary: #1a2530;
-            --accent: #d4af37;
-            --light: #f8f9fa;
-            --dark: #2c3e50;
+            --primary-dark: #0f172a;
+            --primary-navy: #1e293b;
+            --accent-gold: #c5a059;
+            --text-main: #334155;
+            --text-light: #d1d5db;
+            --bg-light: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #fff;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--primary);
-            color: white;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: var(--accent);
-        }
-
-        .oab-badge {
-            font-size: 0.9rem;
-            background-color: rgba(212, 175, 55, 0.2);
-            padding: 4px 10px;
-            border-radius: 4px;
-            border: 1px solid var(--accent);
-            color: #fff;
-        }
-
-        /* Seção Principal / Sobre */
-        .hero-section {
-            padding: 60px 5%;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            background-color: var(--light);
-        }
-
-        .about-image-frame {
-            width: 280px;
-            height: 350px;
-            border: 3px solid var(--accent);
-            border-radius: 8px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-            overflow: hidden;
-            background-color: #e0e0e0;
-        }
-
-        .about-content {
-            max-width: 600px;
-        }
-
-        .about-content h2 {
-            color: var(--primary);
-            font-size: 2.2rem;
-            margin-bottom: 5px;
-        }
-
-        .subtitle {
-            color: var(--accent);
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-top: 0;
-        }
-
-        .contact-info {
-            margin: 20px 0;
-        }
-
-        .contact-info p {
-            margin: 8px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .contact-info a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact-info a:hover {
-            color: var(--accent);
-            text-decoration: underline;
-        }
-
-        .btn-whatsapp {
-            display: inline-block;
-            background-color: #25d366;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
-            transition: background 0.3s;
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #1eb854;
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 30px 5% 15px;
-            border-top: 3px solid var(--accent);
-        }
-
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .footer-bottom {
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.85rem;
-            color: #aaa;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- CABEÇALHO -->
-    <header>
-        <h1>Dr. Maurício Ávila</h1>
-        <span class="oab-badge">OAB/SP 551.435</span>
-    </header>
-
-    <!-- SEÇÃO SOBRE / HERÓI -->
-    <section class="hero-section">
-        
-        <!-- FOTO DO PERFIL -->
-        <div class="about-image-frame">
-            <!-- Substitua "minha-foto.jpg" pelo nome exato do seu arquivo de imagem -->
-            <img src="minha-foto.jpg" alt="Dr. Maurício Ávila" style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-
-        <!-- INFORMAÇÕES DE APRESENTAÇÃO E CONTATO -->
-        <div class="about-content">
-            <h2>Dr. Maurício Ávila</h2>
-            <p class="subtitle">Advogado Especialista em Defesa do Consumidor</p>
-            <p>Atuação especializada na defesa e garantia dos direitos do consumidor, oferecendo atendimento jurídico personalizado, transparente e ágil.</p>
-            
-            <div class="contact-info">
-                <p>
-                    <i class="fa-solid fa-id-card" style="color: var(--accent);"></i> 
-                    <strong>OAB/SP nº 551.435</strong>
-                </p>
-                <p>
-                    <i class="fa-solid fa-envelope" style="color: var(--accent);"></i> 
-                    <a href="mailto:maucavila@adv.oabsp.org.br">maucavila@adv.oabsp.org.br</a>
-                </p>
-            </div>
-
-            <!-- BOTÃO DO WHATSAPP -->
-            <!-- Substitua o número 5511999999999 pelo seu número real com DDD -->
-            <a href="https://wa.me/5511999999999?text=Olá,%20Dr.%20Maurício.%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20consulta." class="btn-whatsapp" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> Falar pelo WhatsApp
-            </a>
-        </div>
-
-    </section>
-
-    <!-- RODAPÉ -->
-    <footer>
-        <div class="footer-content">
-            <h3>Dr. Maurício Ávila — Advocacia</h3>
-            <p>Inscrição Ordem dos Advogados do Brasil: <strong>OAB/SP 551.435</strong></p>
-            <p>E-mail: <a href="mailto:maucavila@adv.oabsp.org.br">maucavila@adv.oabsp.org.br</a></p>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; Todos os direitos reservados — Dr. Maurício Ávila</p>
-        </div>
-    </footer>
-
-</body>
-</html>            background-color: var(--bg-light);
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
             color: var(--text-main);
             line-height: 1.6;
         }
 
-        /* ----- TOPBAR ----- */
+        /* BARRA SUPERIOR (TOPBAR) */
         .topbar {
             background-color: var(--primary-dark);
-            color: #d1d5db;
+            color: var(--text-light);
             font-size: 0.85rem;
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .topbar .container {
+            padding: 8px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .topbar-info {
@@ -232,150 +53,95 @@
         .topbar-info item {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
-        /* ----- CONTAINER ----- */
-        .container {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 20px;
+        .topbar a {
+            color: var(--accent-gold);
+            text-decoration: none;
         }
 
-        /* ----- HEADER / NAVBAR ----- */
+        /* CABEÇALHO / NAVBAR */
         header {
             background-color: var(--primary-navy);
+            padding: 15px 5%;
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 100;
             box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            padding: 15px 0;
         }
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .brand-icon {
-            width: 42px;
-            height: 42px;
-            background: linear-gradient(135deg, var(--accent-gold), #8a6d3b);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 10px rgba(197, 160, 89, 0.3);
+            max-width: 1140px;
+            margin: 0 auto;
         }
 
         .brand-text h1 {
             font-family: 'Cinzel', serif;
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             color: #ffffff;
             letter-spacing: 0.5px;
-            font-weight: 700;
         }
 
-        .brand-text span {
-            font-size: 0.75rem;
+        .oab-badge {
+            display: inline-block;
+            background-color: rgba(197, 160, 89, 0.15);
+            border: 1px solid var(--accent-gold);
             color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            display: block;
-            margin-top: -2px;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #e5e7eb;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-gold);
-        }
-
-        .btn-header {
-            background-color: var(--accent-gold);
-            color: var(--primary-dark);
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 700;
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-header:hover {
-            background-color: var(--accent-gold-hover);
-            transform: translateY(-2px);
-        }
-
-        /* ----- HERO SECTION ----- */
+        /* SEÇÃO HERO / APRESENTAÇÃO */
         .hero {
             background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-navy) 100%);
             color: #ffffff;
-            padding: 60px 0 80px 0;
-            position: relative;
-            overflow: hidden;
+            padding: 60px 5%;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
-            background: radial-gradient(circle at 80% 20%, rgba(197, 160, 89, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .hero-grid {
+        .hero-container {
+            max-width: 1140px;
+            margin: 0 auto;
             display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
+            grid-template-columns: 1fr;
             gap: 40px;
             align-items: center;
         }
 
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(197, 160, 89, 0.15);
-            border: 1px solid rgba(197, 160, 89, 0.4);
-            color: var(--accent-gold);
-            padding: 6px 14px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 20px;
+        @media (min-width: 768px) {
+            .hero-container {
+                grid-template-columns: 0.9fr 1.1fr;
+            }
+        }
+
+        /* MOLDURA DA FOTO */
+        .hero-img-box {
+            width: 100%;
+            max-width: 320px;
+            height: 380px;
+            margin: 0 auto;
+            border: 2px solid var(--accent-gold);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            background-color: #334155;
+        }
+
+        .hero-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .hero-content h2 {
             font-family: 'Cinzel', serif;
-            font-size: 2.3rem;
-            line-height: 1.25;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
             color: #ffffff;
         }
 
@@ -383,1012 +149,136 @@
             color: var(--accent-gold);
         }
 
-        .hero-content p {
-            font-size: 1.05rem;
-            color: #d1d5db;
-            margin-bottom: 30px;
-            line-height: 1.7;
-        }
-
-        .hero-bullets {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-
-        .hero-bullets li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-            color: #e5e7eb;
-        }
-
-        .hero-bullets li i {
-            color: var(--accent-gold);
+        .hero-subtitle {
             font-size: 1.1rem;
-        }
-
-        /* ----- FORM CONTAINER CARD ----- */
-        .form-card {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            color: var(--text-main);
-            border-top: 5px solid var(--accent-gold);
-            position: relative;
-        }
-
-        .form-card-header {
-            text-align: center;
-            margin-bottom: 22px;
-        }
-
-        .form-card-header h3 {
-            font-size: 1.35rem;
-            color: var(--primary-navy);
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .form-card-header p {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-        }
-
-        .form-group {
-            margin-bottom: 16px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.82rem;
-            font-weight: 700;
-            color: var(--primary-navy);
-            margin-bottom: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .form-group input, 
-        .form-group select, 
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 14px;
-            border: 1.5px solid var(--border-color);
-            border-radius: 8px;
-            font-size: 0.95rem;
-            color: var(--text-main);
-            background-color: #fafafa;
-            transition: all 0.3s;
-        }
-
-        .form-group input:focus, 
-        .form-group select:focus, 
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent-gold);
-            background-color: #ffffff;
-            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
-        }
-
-        .btn-submit {
-            width: 100%;
-            background-color: var(--accent-green);
-            color: #ffffff;
-            border: none;
-            padding: 16px;
-            border-radius: 8px;
-            font-size: 1.05rem;
-            font-weight: 700;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            transition: all 0.3s;
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-submit:hover {
-            background-color: var(--accent-green-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-        }
-
-        .form-footer-note {
-            text-align: center;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            margin-top: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
-
-        /* ----- TRUST STRIP ----- */
-        .trust-strip {
-            background-color: #ffffff;
-            padding: 25px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            text-align: center;
-        }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-        }
-
-        .trust-item i {
-            font-size: 1.8rem;
             color: var(--accent-gold);
-        }
-
-        .trust-item div {
-            text-align: left;
-        }
-
-        .trust-item h4 {
-            font-size: 0.95rem;
-            color: var(--primary-navy);
-            font-weight: 700;
-        }
-
-        .trust-item p {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        /* ----- SERVICES SECTION ----- */
-        .services {
-            padding: 80px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 50px auto;
-        }
-
-        .section-header span {
-            color: var(--accent-gold);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-size: 0.85rem;
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        .section-header h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 2rem;
-            color: var(--primary-navy);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .service-card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 35px 25px;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-            border-color: var(--accent-gold);
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(11, 29, 58, 0.05);
-            color: var(--primary-navy);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
             margin-bottom: 20px;
-            transition: all 0.3s;
+            font-weight: 500;
         }
 
-        .service-card:hover .service-icon {
-            background: var(--primary-navy);
-            color: var(--accent-gold);
-        }
-
-        .service-card h4 {
-            font-size: 1.25rem;
-            color: var(--primary-navy);
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-
-        .service-card p {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .service-list {
-            list-style: none;
+        .hero-content p {
+            color: var(--text-light);
             margin-bottom: 25px;
+            font-size: 1rem;
         }
 
-        .service-list li {
-            font-size: 0.88rem;
-            color: var(--text-main);
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .service-list li i {
-            color: var(--accent-green);
-            font-size: 0.8rem;
-        }
-
-        .service-btn {
+        /* BOTÃO WHATSAPP */
+        .btn-whatsapp {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            gap: 8px;
-            width: 100%;
-            padding: 12px;
-            background: rgba(11, 29, 58, 0.05);
-            color: var(--primary-navy);
+            gap: 10px;
+            background-color: #25d366;
+            color: #ffffff;
+            padding: 14px 28px;
             border-radius: 6px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 0.88rem;
-            transition: all 0.3s;
-        }
-
-        .service-card:hover .service-btn {
-            background: var(--accent-gold);
-            color: var(--primary-dark);
-        }
-
-        /* ----- ABOUT SECTION ----- */
-        .about {
-            background-color: #ffffff;
-            padding: 80px 0;
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-image-box {
-            position: relative;
-        }
-
-        .about-image-frame {
-            width: 100%;
-            height: 440px;
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary-navy));
-            border-radius: 16px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-            text-align: center;
-            padding: 30px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-            border: 4px solid var(--accent-gold);
-        }
-
-        .about-avatar-icon {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            border: 3px solid var(--accent-gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3.5rem;
-            color: var(--accent-gold);
-            margin-bottom: 20px;
-        }
-
-        .about-image-frame h4 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.5rem;
-            color: #ffffff;
-            margin-bottom: 5px;
-        }
-
-        .about-image-frame p {
-            color: var(--accent-gold);
-            font-size: 0.9rem;
             font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .about-content h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 2rem;
-            color: var(--primary-navy);
-            margin-bottom: 20px;
-        }
-
-        .about-content p {
-            font-size: 0.98rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            line-height: 1.7;
-        }
-
-        .about-highlights {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .about-check {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-            font-size: 0.92rem;
-            color: var(--primary-navy);
-        }
-
-        .about-check i {
-            color: var(--accent-gold);
-            font-size: 1.1rem;
-        }
-
-        /* ----- PROCESS SECTION ----- */
-        .process {
-            padding: 80px 0;
-            background-color: var(--bg-light);
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            position: relative;
-        }
-
-        .process-card {
-            background: #ffffff;
-            padding: 35px 25px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            text-align: center;
-            position: relative;
-        }
-
-        .process-number {
-            width: 50px;
-            height: 50px;
-            background: var(--accent-gold);
-            color: var(--primary-dark);
-            font-weight: 800;
-            font-size: 1.2rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px auto;
-            box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
-        }
-
-        .process-card h4 {
-            font-size: 1.15rem;
-            color: var(--primary-navy);
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .process-card p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        /* ----- FAQ SECTION ----- */
-        .faq {
-            background-color: #ffffff;
-            padding: 80px 0;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            margin-bottom: 15px;
-            overflow: hidden;
-        }
-
-        .faq-question {
-            width: 100%;
-            background: #ffffff;
-            padding: 18px 20px;
-            text-align: left;
-            border: none;
             font-size: 1rem;
-            font-weight: 700;
-            color: var(--primary-navy);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
         }
 
-        .faq-question:hover {
-            background: #f9fafb;
+        .btn-whatsapp:hover {
+            background-color: #1eb854;
+            transform: translateY(-2px);
         }
 
-        .faq-answer {
-            padding: 0 20px 18px 20px;
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            display: none;
-            line-height: 1.6;
-        }
-
-        .faq-item.active .faq-answer {
-            display: block;
-        }
-
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-            color: var(--accent-gold);
-        }
-
-        /* ----- FOOTER ----- */
+        /* RODAPÉ */
         footer {
             background-color: var(--primary-dark);
-            color: #9ca3af;
-            padding: 60px 0 30px 0;
-            font-size: 0.88rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-brand h4 {
-            font-family: 'Cinzel', serif;
             color: #ffffff;
-            font-size: 1.2rem;
+            text-align: center;
+            padding: 40px 5% 20px;
+            border-top: 2px solid var(--accent-gold);
+        }
+
+        .footer-content h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--accent-gold);
             margin-bottom: 10px;
         }
 
-        .footer-brand p {
-            line-height: 1.6;
-            margin-bottom: 15px;
+        .footer-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin: 5px 0;
         }
 
-        .footer-links h5 {
-            color: #ffffff;
-            font-size: 1rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 8px;
-        }
-
-        .footer-links a {
-            color: #9ca3af;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
+        .footer-content a {
             color: var(--accent-gold);
+            text-decoration: none;
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 25px;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #6b7280;
-        }
-
-        /* ----- FLOATING WHATSAPP BUTTON ----- */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            width: 60px;
-            height: 60px;
-            background-color: var(--accent-green);
-            color: #ffffff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
-            z-index: 9999;
-            transition: all 0.3s;
-            text-decoration: none;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            background-color: var(--accent-green-hover);
-        }
-
-        /* ----- RESPONSIVE / MEDIA QUERIES ----- */
-        @media (max-width: 992px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-            }
-            .trust-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-            .services-grid, .process-grid {
-                grid-template-columns: 1fr;
-            }
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-            .nav-links {
-                display: none; /* Simplificado para celular */
-            }
-        }
-
-        @media (max-width: 600px) {
-            .hero-content h2 {
-                font-size: 1.8rem;
-            }
-            .trust-grid {
-                grid-template-columns: 1fr;
-            }
-            .topbar {
-                display: none;
-            }
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+            color: #64748b;
         }
     </style>
 </head>
 <body>
 
-    <!-- TOPBAR -->
+    <!-- BARRA DE INFORMAÇÕES SUPERIOR -->
     <div class="topbar">
-        <div class="container">
-            <div class="topbar-info">
-                <span><i class="fa-solid fa-shield-halved"></i> Defesa do Consumidor Bancário e Saúde</span>
-                <span><i class="fa-solid fa-clock"></i> Atendimento Nacional 100% Online</span>
-            </div>
-            <div>
-                <span><i class="fa-solid fa-lock"></i> Consulta Protegida pela LGPD</span>
-            </div>
+        <div class="topbar-info">
+            <span><i class="fa-solid fa-id-card"></i> OAB/SP 551.435</span>
+        </div>
+        <div>
+            <a href="mailto:maucavila@adv.oabsp.org.br"><i class="fa-solid fa-envelope"></i> maucavila@adv.oabsp.org.br</a>
         </div>
     </div>
 
-    <!-- HEADER / NAVBAR -->
+    <!-- CABEÇALHO PRINCIPAL -->
     <header>
-        <div class="container navbar">
-            <a href="#" class="brand">
-                <div class="brand-icon">
-                    <i class="fa-solid fa-scale-balanced"></i>
-                </div>
-                <div class="brand-text">
-                    <h1>DR. MAURÍCIO ÁVILA</h1>
-                    <span>ADVOCACIA & PROTEÇÃO FINANCEIRA</span>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#servicos">Áreas de Atuação</a></li>
-                <li><a href="#sobre">O Advogado</a></li>
-                <li><a href="#como-funciona">Como Funciona</a></li>
-                <li><a href="#faq">Dúvidas</a></li>
-            </ul>
-            <a href="#formulario" class="btn-header">
-                <i class="fa-solid fa-paper-plane"></i> Analisar Meu Caso
-            </a>
+        <div class="navbar">
+            <div class="brand-text">
+                <h1>Dr. Maurício Ávila</h1>
+            </div>
+            <span class="oab-badge">Inscrição OAB/SP 551.435</span>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- SEÇÃO PRINCIPAL / HERÓI -->
     <section class="hero">
-        <div class="container hero-grid">
+        <div class="hero-container">
+            
+            <!-- FOTO DE PERFIL -->
+            <div class="hero-img-box">
+                <!-- Certifique-se de salvar sua foto no GitHub com o nome "minha-foto.jpg" -->
+                <img src="minha-foto.jpg" alt="Dr. Maurício Ávila - Advogado">
+            </div>
+
+            <!-- DADOS E APRESENTAÇÃO -->
             <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fa-solid fa-gavel"></i> Defesa Contra Abusos de Bancos e Planos de Saúde
-                </div>
-                <h2>Teve Dinheiro Retirado da Conta ou Tratamento Negado? <span>Nós Defendemos Seus Direitos.</span></h2>
-                <p>O <strong>Dr. Maurício Ávila Advocacia</strong> atua na análise minuciosa e defesa de consumidores contra prejuízos causados por fraudes bancárias, descontos indevidos e negativas abusivas da saúde.</p>
+                <h2>Dr. Maurício <span>Ávila</span></h2>
+                <div class="hero-subtitle">Advogado Especialista em Defesa do Consumidor</div>
                 
-                <ul class="hero-bullets">
-                    <li><i class="fa-solid fa-circle-check"></i> Recuperação de valores em Golpes do PIX e Falsa Central</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Cancelamento e devolução de Empréstimos Consignados/RMC</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Ações urgentes com pedido de Liminar contra Planos de Saúde</li>
-                </ul>
-            </div>
+                <p>Atuação jurídica especializada na defesa dos direitos do consumidor, oferecendo soluções ágeis, transparentes e focadas na resolução de conflitos e reparação de danos.</p>
 
-            <!-- FORMULÁRIO DE CAPTURA INTEGRAÇAO WHATSAPP -->
-            <div class="form-card" id="formulario">
-                <div class="form-card-header">
-                    <h3>Análise Inicial do Seu Caso</h3>
-                    <p>Preencha os dados abaixo para receber uma orientação jurídica direta pelo WhatsApp.</p>
-                </div>
-
-                <form id="leadForm">
-                    <div class="form-group">
-                        <label for="nome"><i class="fa-solid fa-user"></i> Seu Nome Completo:</label>
-                        <input type="text" id="nome" placeholder="Ex.: Maria Silva" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="telefoneCliente"><i class="fa-brands fa-whatsapp"></i> Seu Telefone / WhatsApp com DDD:</label>
-                        <input type="tel" id="telefoneCliente" placeholder="Ex.: (11) 99999-9999" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="problema"><i class="fa-solid fa-circle-exclamation"></i> Qual o seu problema principal?</label>
-                        <select id="problema" required>
-                            <option value="">Selecione a situação...</option>
-                            <option value="Fraudes Bancarias / Golpe do PIX">Fraudes Bancárias / Golpe do PIX / Falsa Central</option>
-                            <option value="Credito Consignado / RMC">Empréstimo Consignado Não Autorizado / Cartão RMC</option>
-                            <option value="Plano de Saude / Negativa">Negativa do Plano de Saúde (Cirurgia/Remédio/Exame)</option>
-                            <option value="Cobranca Indevida / Conta Invasao">Transferência Desconhecida / Conta Invasão</option>
-                            <option value="Outro Assunto Consumidor">Outro problema com Banco ou Plano de Saúde</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="documentos"><i class="fa-solid fa-file-contract"></i> Possui comprovantes / documentos?</label>
-                        <select id="documentos" required>
-                            <option value="Sim, tenho tudo">Sim, tenho contratos/extratos/boletim/relatório</option>
-                            <option value="Apenas alguns prints">Tenho apenas alguns prints/comprovantes</option>
-                            <option value="Nao tenho no momento">Não tenho no momento</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="detalhes"><i class="fa-solid fa-align-left"></i> Resumo Rápido do Caso:</label>
-                        <textarea id="detalhes" rows="3" placeholder="Descreva brevemente o valor perdido ou o procedimento negado..." required></textarea>
-                    </div>
-
-                    <button type="button" class="btn-submit" onclick="enviarWhatsApp()">
-                        <i class="fa-brands fa-whatsapp"></i> Analisar Pelo WhatsApp
-                    </button>
-                </form>
-
-                <div class="form-footer-note">
-                    <i class="fa-solid fa-lock"></i> Seus dados estão 100% seguros de acordo com a LGPD.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TRUST STRIP -->
-    <section class="trust-strip">
-        <div class="container trust-grid">
-            <div class="trust-item">
-                <i class="fa-solid fa-laptop-medical"></i>
-                <div>
-                    <h4>Atendimento Digital</h4>
-                    <p>Sem sair de casa</p>
-                </div>
-            </div>
-            <div class="trust-item">
-                <i class="fa-solid fa-user-shield"></i>
-                <div>
-                    <h4>Análise Personalizada</h4>
-                    <p>Foco na sua dor real</p>
-                </div>
-            </div>
-            <div class="trust-item">
-                <i class="fa-solid fa-gavel"></i>
-                <div>
-                    <h4>Atuação Especializada</h4>
-                    <p>Bancos e Saúde</p>
-                </div>
-            </div>
-            <div class="trust-item">
-                <i class="fa-solid fa-bolt"></i>
-                <div>
-                    <h4>Agilidade de Resposta</h4>
-                    <p>Foco na emergência</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES SECTION -->
-    <section class="services" id="servicos">
-        <div class="container">
-            <div class="section-header">
-                <span>Nossas Especialidades</span>
-                <h3>Defesa Estratégica em Três Pilares</h3>
-            </div>
-
-            <div class="services-grid">
-                <!-- CARD 1 -->
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon">
-                            <i class="fa-solid fa-building-columns"></i>
-                        </div>
-                        <h4>Fraudes e Golpes Bancários</h4>
-                        <p>Recuperação de valores e responsabilização das instituições financeiras por falhas de segurança.</p>
-                        <ul class="service-list">
-                            <li><i class="fa-solid fa-check"></i> Golpe do PIX e Falso Gerente</li>
-                            <li><i class="fa-solid fa-check"></i> Conta Invadida / Transferências</li>
-                            <li><i class="fa-solid fa-check"></i> Cartão Utilizado Indevidamente</li>
-                            <li><i class="fa-solid fa-check"></i> Empréstimos feitos durante Golpes</li>
-                        </ul>
-                    </div>
-                    <a href="#formulario" class="service-btn"><i class="fa-brands fa-whatsapp"></i> Avaliar Golpe Bancário</a>
-                </div>
-
-                <!-- CARD 2 -->
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon">
-                            <i class="fa-solid fa-file-invoice-dollar"></i>
-                        </div>
-                        <h4>Crédito Consignado & RMC</h4>
-                        <p>Análise de descontos indevidos em benefícios do INSS, salários e contratos de crédito abusivos.</p>
-                        <ul class="service-list">
-                            <li><i class="fa-solid fa-check"></i> Empréstimo Não Solicitado</li>
-                            <li><i class="fa-solid fa-check"></i> Abusos de Cartão Consignado (RMC/RCC)</li>
-                            <li><i class="fa-solid fa-check"></i> Portabilidade e Refinanciamento Falso</li>
-                            <li><i class="fa-solid fa-check"></i> Falhas na Contratação Eletrônica</li>
-                        </ul>
-                    </div>
-                    <a href="#formulario" class="service-btn"><i class="fa-brands fa-whatsapp"></i> Avaliar Meu Consignado</a>
-                </div>
-
-                <!-- CARD 3 -->
-                <div class="service-card">
-                    <div>
-                        <div class="service-icon">
-                            <i class="fa-solid fa-kit-medical"></i>
-                        </div>
-                        <h4>Direito da Saúde</h4>
-                        <p>Ações urgentes (Pedidos de Liminar) contra negativas abusivas das operadoras de planos de saúde.</p>
-                        <ul class="service-list">
-                            <li><i class="fa-solid fa-check"></i> Negativa de Cirurgias e Internações</li>
-                            <li><i class="fa-solid fa-check"></i> Medicamentos de Alto Custo</li>
-                            <li><i class="fa-solid fa-check"></i> Tratamentos e Home Care</li>
-                            <li><i class="fa-solid fa-check"></i> Exames complexos e Procedimentos</li>
-                        </ul>
-                    </div>
-                    <a href="#formulario" class="service-btn"><i class="fa-brands fa-whatsapp"></i> Avaliar Plano de Saúde</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section class="about" id="sobre">
-        <div class="container about-grid">
-            <div class="about-image-box">
-                <div class="about-image-frame">
-                    <div class="about-avatar-icon">
-                        <i class="fa-solid fa-user-tie"></i>
-                    </div>
-                    <h4>Dr. Maurício Ávila</h4>
-                    <p>Advogado Especialista em Defesa do Consumidor</p>
-                </div>
-            </div>
-
-            <div class="about-content">
-                <h3>Atuação Focada na Proteção e Restituição do Consumidor</h3>
-                <p>Bancos, financeiras e operadoras de plano de saúde possuem estruturas jurídicas pesadas para defender seus interesses. O consumidor precisa de um acompanhamento técnico, firme e especializado para nivelar essa disputa.</p>
-                <p>O escritório <strong>Dr. Maurício Ávila Advocacia</strong> concentra suas forças em identificar falhas de segurança, cobranças ilegais e abusividades, buscando a devolução de valores e a garantia do direito à saúde de forma célere.</p>
-                
-                <div class="about-highlights">
-                    <div class="about-check"><i class="fa-solid fa-square-check"></i> Análise técnica de contratos</div>
-                    <div class="about-check"><i class="fa-solid fa-square-check"></i> Atendimento ágil e desburocratizado</div>
-                    <div class="about-check"><i class="fa-solid fa-square-check"></i> Orientação jurídica transparente</div>
-                    <div class="about-check"><i class="fa-solid fa-square-check"></i> Respeito às normas éticas da OAB</div>
-                </div>
-
-                <a href="#formulario" class="btn-header" style="padding: 14px 28px; font-size: 0.95rem;">
-                    <i class="fa-brands fa-whatsapp"></i> Falar com a Equipe no WhatsApp
+                <!-- BOTÃO DE CONTATO -->
+                <!-- Substitua o número abaixo pelo seu WhatsApp com DDD (ex: 5511999999999) -->
+                <a href="https://wa.me/5513991749820?text=Olá,%20Dr.%20Maurício.%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20consulta." class="btn-whatsapp" target="_blank">
+                    <i class="fa-brands fa-whatsapp fa-lg"></i> Falar no WhatsApp
                 </a>
             </div>
+
         </div>
     </section>
 
-    <!-- PROCESS SECTION -->
-    <section class="process" id="como-funciona">
-        <div class="container">
-            <div class="section-header">
-                <span>Passo a Passo</span>
-                <h3>Como Funciona Nosso Atendimento?</h3>
-            </div>
-
-            <div class="process-grid">
-                <div class="process-card">
-                    <div class="process-number">1</div>
-                    <h4>1. Você Explica o Problema</h4>
-                    <p>Preencha o formulário nesta página informando os detalhes principais da sua situação com o banco ou plano de saúde.</p>
-                </div>
-
-                <div class="process-card">
-                    <div class="process-number">2</div>
-                    <h4>2. Avaliamos a Documentação</h4>
-                    <p>Nossa equipe analisa extratos, boletins de ocorrência, contratos ou negativas médicas enviadas por você.</p>
-                </div>
-
-                <div class="process-card">
-                    <div class="process-number">3</div>
-                    <h4>3. Orientação Jurídica</h4>
-                    <p>Você recebe o direcionamento claro sobre as medidas cabíveis para buscar o ressarcimento ou o tratamento necessário.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-header">
-                <span>Tire Suas Dúvidas</span>
-                <h3>Perguntas Frequentes</h3>
-            </div>
-
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Preciso ir até o escritório presencialmente?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        Não. Todo o processo de envio de documentos, análise e comunicação pode ser feito de forma 100% online através do WhatsApp e e-mail, com total segurança e comodidade.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Fui vítima do Golpe do PIX, o banco realmente deve devolver?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        De acordo com o entendimento dos tribunais superiores, as instituições financeiras respondem por falhas na segurança e por transações atípicas fora do perfil do cliente. Cada caso passa por uma análise de viabilidade técnica dos documentos.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Quanto tempo demora para analisar meu caso pelo WhatsApp?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        Após o envio das informações pelo formulário e confirmação dos documentos, nossa equipe retorna o contato para dar o direcionamento inicial rapidamente.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
+    <!-- RODAPÉ -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h4>DR. MAURÍCIO ÁVILA ADVOCACIA</h4>
-                    <p>Proteção financeira e defesa dos direitos do consumidor em situações abusivas envolvendo instituições bancárias, financeiras e operadoras de saúde.</p>
-                </div>
-
-                <div class="footer-links">
-                    <h5>Links Rápidos</h5>
-                    <ul>
-                        <li><a href="#servicos">Fraudes Bancárias</a></li>
-                        <li><a href="#servicos">Crédito Consignado</a></li>
-                        <li><a href="#servicos">Planos de Saúde</a></li>
-                        <li><a href="#sobre">Quem Somos</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-links">
-                    <h5>Conformidade & Ética</h5>
-                    <p style="font-size: 0.8rem; line-height: 1.5;">Atendimento informativo em estrita conformidade com o Provimento nº 205/2021 do Conselho Federal da OAB. Proteção de dados assegurada nos termos da Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).</p>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                &copy; 2026 Dr. Maurício Ávila Advocacia. Todos os direitos reservados.
-            </div>
+        <div class="footer-content">
+            <h3>Dr. Maurício Ávila — Advocacia</h3>
+            <p>Ordem dos Advogados do Brasil: <strong>OAB/SP nº 551.435</strong></p>
+            <p>E-mail: <a href="mailto:maucavila@adv.oabsp.org.br">maucavila@adv.oabsp.org.br</a></p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; Todos os direitos reservados — Dr. Maurício Ávila</p>
         </div>
     </footer>
 
-    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
-    <a href="#formulario" class="whatsapp-float" title="Falar pelo WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <!-- SCRIPT DE ENVIO DO FORMULÁRIO PARA O WHATSAPP -->
-    <script>
-        function enviarWhatsApp() {
-            // ATENÇÃO: Altere o número abaixo pelo SEU número real de atendimento com DDD (Exemplo: 55 + DDD + Número)
-            const numeroSeuWhatsapp = "5513991749820";
-
-            const nome = document.getElementById('nome').value;
-            const telefoneCliente = document.getElementById('telefoneCliente').value;
-            const problema = document.getElementById('problema').value;
-            const documentos = document.getElementById('documentos').value;
-            const detalhes = document.getElementById('detalhes').value;
-
-            if (!nome || !telefoneCliente || !problema || !detalhes) {
-                alert("Por favor, preencha todos os campos do formulário para iniciarmos a análise.");
-                return;
-            }
-
-            // Formatação da mensagem enviada para o seu WhatsApp com os dados e o telefone digitado pelo cliente
-            const mensagem = `*Solicitação de Análise - Dr. Maurício Ávila Advocacia*%0A%0A` +
-                `*Nome:* ${encodeURIComponent(nome)}%0A` +
-                `*Telefone/Whats:* ${encodeURIComponent(telefoneCliente)}%0A` +
-                `*Problema:* ${encodeURIComponent(problema)}%0A` +
-                `*Possui Documentos:* ${encodeURIComponent(documentos)}%0A` +
-                `*Resumo do Caso:* ${encodeURIComponent(detalhes)}`;
-
-            // Abre a conversa diretamente no seu WhatsApp
-            window.open(`https://wa.me/${numeroSeuWhatsapp}?text=${mensagem}`, '_blank');
-        }
-
-        // Script interativo para o FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const faqItem = button.parentElement;
-                faqItem.classList.toggle('active');
-            });
-        });
-    </script>
 </body>
 </html>
