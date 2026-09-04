@@ -1173,31 +1173,53 @@
             faqItem.classList.toggle('active');
         }
 
-        function enviarWhatsApp() {
-            var nome = document.getElementById('nome').value;
-            var telefone = document.getElementById('telefoneCliente').value;
-            var problema = document.getElementById('problema').value;
-            var documentos = document.getElementById('documentos').value;
-            var detalhes = document.getElementById('detalhes').value;
+  function enviarWhatsApp() {
+    var nome = document.getElementById('nome').value;
+    var telefone = document.getElementById('telefoneCliente').value;
+    var problema = document.getElementById('problema').value;
+    var documentos = document.getElementById('documentos').value;
+    var detalhes = document.getElementById('detalhes').value;
 
-            if (!nome || !telefone || !problema || !detalhes) {
-                alert("Por favor, preencha todos os campos do formulário para que possamos analisar seu caso.");
-                return;
-            }
+    if (!nome || !telefone || !problema || !detalhes) {
+        alert("Por favor, preencha todos os campos do formulário.");
+        return;
+    }
 
-            var mensagem = "*NOVA CONSULTA VIA SITE*\n\n" +
-                           "*Nome:* " + nome + "\n" +
-                           "*Telefone:* " + telefone + "\n" +
-                           "*Assunto:* " + problema + "\n" +
-                           "*Documentos:* " + documentos + "\n" +
-                           "*Resumo:* " + detalhes;
+    var mensagem = "*NOVA CONSULTA VIA SITE*\n\n" +
+                   "*Nome:* " + nome + "\n" +
+                   "*Telefone:* " + telefone + "\n" +
+                   "*Assunto:* " + problema + "\n" +
+                   "*Documentos:* " + documentos + "\n" +
+                   "*Resumo:* " + detalhes;
 
-            // Substitua o número abaixo pelo seu número de WhatsApp com DDD
-            var numeroWhats = "5513991749820"; 
-            var url = "https://wa.me/" + numeroWhats + "?text=" + encodeURIComponent(mensagem);
-            
-            window.open(url, '_blank');
-        }
-    </script>
+    // ENVIA UMA CÓPIA PARA O E-MAIL
+    fetch("https://formsubmit.co/ajax/maucavila@adv.oabsp.org.br", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            _subject: "Novo atendimento pelo site - " + nome,
+            Origem: "mauricioavila.adv.br",
+            Nome: nome,
+            Telefone: telefone,
+            Assunto: problema,
+            Documentos: documentos,
+            Resumo: detalhes
+        })
+    })
+    .catch(function(error) {
+        console.log("Erro no envio do e-mail:", error);
+    });
+
+    // ABRE O WHATSAPP
+    var numeroWhats = "5513991749820";
+    var url = "https://wa.me/" + numeroWhats +
+              "?text=" + encodeURIComponent(mensagem);
+
+    window.open(url, '_blank');
+}
+</script>
 </body>
 </html>
