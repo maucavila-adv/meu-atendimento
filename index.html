@@ -1192,23 +1192,21 @@
                    "*Documentos:* " + documentos + "\n" +
                    "*Resumo:* " + detalhes;
 
-    // ENVIA UMA CÓPIA PARA O E-MAIL
-fetch("https://api.web3forms.com/submit", {
+// ENVIA UMA CÓPIA PARA O E-MAIL
+fetch("https://formsubmit.co/ajax/maucavila@adv.oabsp.org.br", {
     method: "POST",
     headers: {
         "Content-Type": "application/json",
         "Accept": "application/json"
     },
     body: JSON.stringify({
-access_key: "49a6e5c7-6eb3-4e69-8f3d-f76154ceeb2a",
-        subject: "Novo atendimento pelo site - " + nome,
-        from_name: "Site Dr. Maurício Ávila",
+        _subject: "Novo atendimento pelo site - " + nome,
+        Origem: "mauricioavila.adv.br",
         Nome: nome,
         Telefone: telefone,
         Assunto: problema,
         Documentos: documentos,
-        Resumo: detalhes,
-        Origem: "mauricioavila.adv.br"
+        Resumo: detalhes
     })
 })
 .then(function(response) {
