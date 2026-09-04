@@ -1193,25 +1193,33 @@
                    "*Resumo:* " + detalhes;
 
     // ENVIA UMA CÓPIA PARA O E-MAIL
-    fetch("https://formsubmit.co/ajax/maucavila@adv.oabsp.org.br", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        },
-        body: JSON.stringify({
-            _subject: "Novo atendimento pelo site - " + nome,
-            Origem: "mauricioavila.adv.br",
-            Nome: nome,
-            Telefone: telefone,
-            Assunto: problema,
-            Documentos: documentos,
-            Resumo: detalhes
-        })
+fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    },
+    body: JSON.stringify({
+access_key: "49a6e5c7-6eb3-4e69-8f3d-f76154ceeb2a",
+        subject: "Novo atendimento pelo site - " + nome,
+        from_name: "Site Dr. Maurício Ávila",
+        Nome: nome,
+        Telefone: telefone,
+        Assunto: problema,
+        Documentos: documentos,
+        Resumo: detalhes,
+        Origem: "mauricioavila.adv.br"
     })
-    .catch(function(error) {
-        console.log("Erro no envio do e-mail:", error);
-    });
+})
+.then(function(response) {
+    return response.json();
+})
+.then(function(data) {
+    console.log("Resposta do envio por e-mail:", data);
+})
+.catch(function(error) {
+    console.log("Erro no envio do e-mail:", error);
+});
 
     // ABRE O WHATSAPP
     var numeroWhats = "5513991749820";
