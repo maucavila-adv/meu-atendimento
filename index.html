@@ -892,15 +892,20 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="problema"><i class="fa-solid fa-circle-exclamation"></i> Qual o seu problema principal?</label>
-                        <select id="problema" required>
-                            <option value="">Selecione a situação...</option>
-                            <option value="Fraudes Bancarias / Golpe do PIX">Fraudes Bancárias / Golpe do PIX / Falsa Central</option>
-                            <option value="Credito Consignado / RMC">Empréstimo Consignado Não Autorizado / Cartão RMC</option>
-                            <option value="Plano de Saude / Negativa">Negativa do Plano de Saúde (Cirurgia/Remédio/Exame)</option>
-                            <option value="Cobranca Indevida / Conta Invasao">Transferência Desconhecida / Conta Invasão</option>
-                            <option value="Outro Assunto Consumidor">Outro problema com Banco ou Plano de Saúde</option>
-                        </select>
+   <label for="problema"><i class="fa-solid fa-circle-exclamation"></i> Qual o assunto principal?</label>
+<select id="problema" required>
+    <option value="">Selecione a situação...</option>
+    <option value="Contratos e Obrigações">Contratos e obrigações</option>
+    <option value="Cobranças e Dívidas">Cobranças e dívidas</option>
+    <option value="Indenização / Responsabilidade Civil">Indenização por danos materiais ou morais</option>
+    <option value="Imóveis">Problemas com imóveis</option>
+    <option value="Família e Sucessões">Família e sucessões</option>
+    <option value="Fraudes Bancárias / Golpe do PIX">Fraudes bancárias / Golpe do PIX</option>
+    <option value="Empréstimos / Consignados / Cobranças Indevidas">Empréstimos, consignados e cobranças indevidas</option>
+    <option value="Plano de Saúde">Problemas com plano de saúde</option>
+    <option value="Fornecedor / Prestador de Serviço">Problemas com fornecedores ou prestadores de serviço</option>
+    <option value="Outro Assunto">Outro assunto de Direito Civil ou do Consumidor</option>
+</select>
                     </div>
 
                     <div class="form-group">
@@ -914,7 +919,7 @@
 
                     <div class="form-group">
                         <label for="detalhes"><i class="fa-solid fa-align-left"></i> Resumo Rápido do Caso:</label>
-                        <textarea id="detalhes" rows="3" placeholder="Descreva brevemente o valor perdido ou o procedimento negado..." required></textarea>
+  <textarea id="detalhes" rows="3" placeholder="Descreva brevemente o que aconteceu e o que você precisa resolver..." required></textarea>
                     </div>
 
                     <button type="button" class="btn-submit" onclick="enviarWhatsApp()">
