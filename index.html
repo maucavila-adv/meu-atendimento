@@ -1297,6 +1297,12 @@ fetch("https://formsubmit.co/ajax/maucavila@adv.oabsp.org.br", {
     var numeroWhats = "5513991749820";
     var url = "https://wa.me/" + numeroWhats +
               "?text=" + encodeURIComponent(mensagem);
+    
+// Registra o clique no WhatsApp no Google Analytics
+gtag('event', 'whatsapp_click', {
+    'event_category': 'contato',
+    'event_label': 'WhatsApp'
+});
 
     window.open(url, '_blank');
 }
