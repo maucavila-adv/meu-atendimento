@@ -830,8 +830,8 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
            .services-grid {
             grid-template-columns: 1fr;
             }
-            }
-            .topbar {
+            
+          .topbar {
                 display: none;
             }
         }
@@ -855,7 +855,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
     <!-- HEADER / NAVBAR -->
     <header>
         <div class="container navbar">
-            <a href="#" class="brand">
+            <a href="/" class="brand">
                 <div class="brand-icon">
                     <i class="fa-solid fa-scale-balanced"></i>
                 </div>
@@ -867,8 +867,8 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
             <ul class="nav-links">
     <li><a href="/" aria-label="Página inicial" title="Página inicial"><i class="fa-solid fa-house"></i></a></li>
     <li><a href="/#servicos">Áreas de Atuação</a></li>
-   <li><a href="/#sobre">O Advogado</a></li>
-    <li><a href="/#como-funciona">Como Funciona</a></li>
+<li><a href="/#sobre">O Advogado</a></li>
+<li><a href="/#como-funciona">Como Funciona</a></li>
     <li><a href="#faq">Dúvidas</a></li>
 </ul>
             <a href="#formulario" class="btn-header">
@@ -1002,7 +1002,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
 <div class="service-card">
     <div>
         <div class="service-icon">
-            <i class="fa-solid fa-building-columns"></i>
+            <i class="fa-solid fa-file-contract"></i>
         </div>
 
         <h4>Descumprimento de Contratos</h4>
@@ -1023,7 +1023,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
                 <div class="service-card">
                     <div>
                         <div class="service-icon">
-                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <i class="fa-solid fa-file-circle-xmark"></i>
                         </div>
 <h4>Rescisão e Encerramento do Contrato</h4>
 <p>Análise das situações em que o descumprimento contratual pode levar ao encerramento da relação, considerando as obrigações assumidas e as consequências previstas no contrato.</p>
@@ -1043,7 +1043,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
                 <div class="service-card">
                     <div>
                         <div class="service-icon">
-                            <i class="fa-solid fa-hospital-user"></i>
+                            <i class="fa-solid fa-clipboard-check"></i>
                         </div>
 
 <h4>O que Fazer em Caso de Descumprimento do Contrato</h4>
@@ -1263,7 +1263,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
     var documentos = document.getElementById('documentos').value;
     var detalhes = document.getElementById('detalhes').value;
 
-    if (!nome || !telefone || !problema || !detalhes) {
+    if (!nome || !telefone || !problema || !documentos || !detalhes) {
         alert("Por favor, preencha todos os campos do formulário.");
         return;
     }
