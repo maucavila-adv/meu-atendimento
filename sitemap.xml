@@ -43,4 +43,27 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 </url>
+    <url>
+    <loc>https://mauricioavila.adv.br/locacao-condominio.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+<url>
+    <loc>https://mauricioavila.adv.br/compra-venda-posse-imoveis.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+<url>
+    <loc>https://mauricioavila.adv.br/divorcio-guarda-alimentos.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+<url>
+    <loc>https://mauricioavila.adv.br/inventario-sucessoes.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
 </urlset>
