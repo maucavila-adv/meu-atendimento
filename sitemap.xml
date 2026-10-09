@@ -26,4 +26,21 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 </url>
+    <url>
+    <loc>https://mauricioavila.adv.br/contratos-direito-civil.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+<url>
+    <loc>https://mauricioavila.adv.br/danos-materiais-morais.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+<url>
+    <loc>https://mauricioavila.adv.br/responsabilidade-civil.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
 </urlset>
