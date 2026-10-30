@@ -1294,13 +1294,20 @@ fetch("https://formsubmit.co/ajax/maucavila@adv.oabsp.org.br", {
     })
 })
 .then(function(response) {
+    if (!response.ok) {
+        throw new Error("Falha HTTP ao solicitar a copia por e-mail: " + response.status);
+    }
     return response.json();
 })
 .then(function(data) {
-    console.log("Resposta do envio por e-mail:", data);
+    if (data.success !== true && data.success !== "true") {
+        throw new Error("O servico de e-mail nao confirmou o recebimento da solicitacao.");
+    }
+    console.log("Solicitacao de copia por e-mail aceita pelo servico.");
 })
 .catch(function(error) {
-    console.log("Erro no envio do e-mail:", error);
+    console.error("Falha na copia por e-mail:", error);
+    alert("Nao foi possivel confirmar o envio da copia por e-mail. Continue o atendimento pelo WhatsApp e envie a mensagem para o escritorio.");
 });
 
     // ABRE O WHATSAPP
