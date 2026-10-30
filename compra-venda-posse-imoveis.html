@@ -834,9 +834,8 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
            .services-grid {
             grid-template-columns: 1fr;
             }
-            }
         }
-    </style>
+</style>
 </head>
 <body>
 
@@ -854,7 +853,8 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
                     <span>DR. MAURÍCIO ÁVILA ADVOCACIA | DIREITO CIVIL E DO CONSUMIDOR</span>
                 </div>
             </a>
-            <ul class="nav-links">
+            <button type="button" class="mobile-menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal" onclick="alternarMenu(this)"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+            <ul class="nav-links" id="menu-principal">
     <li><a href="/" aria-label="Página inicial" title="Página inicial"><i class="fa-solid fa-house"></i></a></li>
     <li><a href="/#servicos">Áreas de Atuação</a></li>
    <li><a href="/#sobre">O Advogado</a></li>
@@ -1334,5 +1334,21 @@ if (typeof gtag === 'function') {
     window.open(url, '_blank');
 }
 </script>
+    <script>
+    function alternarMenu(botao) {
+        var menu = document.getElementById('menu-principal');
+        var aberto = menu.classList.toggle('is-open');
+        botao.setAttribute('aria-expanded', String(aberto));
+        botao.setAttribute('aria-label', aberto ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+    }
+    document.getElementById('menu-principal').addEventListener('click', function(evento) {
+        if (evento.target.closest('a')) {
+            this.classList.remove('is-open');
+            var botao = document.querySelector('.mobile-menu-toggle');
+            botao.setAttribute('aria-expanded', 'false');
+            botao.setAttribute('aria-label', 'Abrir menu de navegação');
+        }
+    });
+    </script>
 </body>
 </html>
