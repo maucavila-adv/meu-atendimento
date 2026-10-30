@@ -1294,8 +1294,38 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
     var documentos = document.getElementById('documentos').value;
     var detalhes = document.getElementById('detalhes').value;
 
-    if (!nome || !telefone || !problema || !documentos || !detalhes) {
-        alert("Por favor, preencha todos os campos do formulário.");
+    // Valida os dados antes de abrir o WhatsApp ou enviar a copia por e-mail.
+    nome = nome.trim();
+    telefone = telefone.trim();
+    problema = problema.trim();
+    documentos = documentos.trim();
+    detalhes = detalhes.trim();
+
+    function informarCampo(id, mensagem) {
+        alert(mensagem);
+        document.getElementById(id).focus();
+    }
+
+    if (!nome) {
+        informarCampo('nome', 'Por favor, informe seu nome.');
+        return;
+    }
+    var digitosTelefone = telefone.replace(/\D/g, '');
+    if (!/^(?:[1-9][0-9])9?[0-9]{8}$/.test(digitosTelefone)) {
+        informarCampo('telefoneCliente', 'Informe um telefone com DDD válido (10 ou 11 dígitos).');
+        return;
+    }
+    if (!problema) {
+        informarCampo('problema', 'Por favor, selecione o assunto do atendimento.');
+        return;
+    }
+    var campoDocumentos = document.getElementById('documentos');
+    if (campoDocumentos.required && !documentos) {
+        informarCampo('documentos', 'Por favor, selecione uma opção sobre os documentos.');
+        return;
+    }
+    if (!detalhes) {
+        informarCampo('detalhes', 'Por favor, descreva brevemente seu caso.');
         return;
     }
 
