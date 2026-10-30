@@ -51,8 +51,11 @@
     <!-- Google Fonts & Font Awesome Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=optional"></noscript>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <style>
         :root {
@@ -307,7 +310,7 @@
             margin-bottom: 22px;
         }
 
-        .form-card-header h3 {
+        .form-card-header h2 {
             font-size: 1.35rem;
             color: var(--primary-navy);
             font-weight: 700;
@@ -422,7 +425,7 @@
             text-align: left;
         }
 
-        .trust-item h4 {
+        .trust-item h3 {
             font-size: 0.95rem;
             color: var(--primary-navy);
             font-weight: 700;
@@ -445,7 +448,7 @@
         }
 
         .section-header span {
-            color: var(--accent-gold);
+            color: #80601f;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -454,7 +457,7 @@
             margin-bottom: 8px;
         }
 
-        .section-header h3 {
+        .section-header h2 {
             font-family: 'Cinzel', serif;
             font-size: 2rem;
             color: var(--primary-navy);
@@ -503,7 +506,7 @@
             color: var(--accent-gold);
         }
 
-        .service-card h4 {
+        .service-card h3 {
             font-size: 1.25rem;
             color: var(--primary-navy);
             margin-bottom: 12px;
@@ -590,7 +593,7 @@
             object-fit: cover;
         }
 
-        .about-content h3 {
+        .about-content h2 {
             font-family: 'Cinzel', serif;
             font-size: 2rem;
             color: var(--primary-navy);
@@ -674,7 +677,7 @@
             box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
         }
 
-        .process-card h4 {
+        .process-card h3 {
             font-size: 1.15rem;
             color: var(--primary-navy);
             margin-bottom: 10px;
@@ -757,7 +760,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
             margin-bottom: 40px;
         }
 
-        .footer-brand h4 {
+        .footer-brand h2 {
             font-family: 'Cinzel', serif;
             color: #ffffff;
             font-size: 1.2rem;
@@ -769,7 +772,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
             margin-bottom: 12px;
         }
 
-        .footer-links h5 {
+        .footer-links h3 {
             color: #ffffff;
             font-size: 1rem;
             margin-bottom: 15px;
@@ -799,7 +802,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
             padding-top: 25px;
             text-align: center;
             font-size: 0.8rem;
-            color: #6b7280;
+            color: #cbd5e1;
         }
 
         /* ----- FLOATING WHATSAPP BUTTON ----- */
@@ -897,6 +900,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
         </div>
     </header>
 
+    <main id="conteudo-principal">
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container hero-grid">
@@ -917,7 +921,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
             <!-- FORMULÁRIO DE CAPTURA INTEGRAÇAO WHATSAPP -->
             <div class="form-card" id="formulario">
                 <div class="form-card-header">
-                    <h3>Análise inicial do seu caso</h3>
+                    <h2>Análise inicial do seu caso</h2>
                     <p>Preencha os dados abaixo para receber uma orientação jurídica direta pelo WhatsApp.</p>
                 </div>
 
@@ -982,28 +986,28 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
             <div class="trust-item">
                 <i class="fa-solid fa-laptop-medical"></i>
                 <div>
-                    <h4>Atendimento Digital</h4>
+                    <h3>Atendimento Digital</h3>
                     <p>Sem sair de casa</p>
                 </div>
             </div>
             <div class="trust-item">
                 <i class="fa-solid fa-user-shield"></i>
                 <div>
-                    <h4>Análise personalizada</h4>
+                    <h3>Análise personalizada</h3>
                     <p>Foco na sua dor real</p>
                 </div>
             </div>
             <div class="trust-item">
                 <i class="fa-solid fa-gavel"></i>
                 <div>
-                    <h4>Atuação em Direito Civil e do Consumidor</h4>
+                    <h3>Atuação em Direito Civil e do Consumidor</h3>
                     <p>Contratos, imóveis, família, Bancos e Saúde</p>
                 </div>
             </div>
             <div class="trust-item">
                 <i class="fa-solid fa-bolt"></i>
                 <div>
-                    <h4>Atendimento Objetivo</h4>
+                    <h3>Atendimento Objetivo</h3>
                     <p>Análise clara de cada situação</p>
                 </div>
             </div>
@@ -1015,7 +1019,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
         <div class="container">
             <div class="section-header">
                 <span>Áreas de Atuação</span>
-                <h3>Atuação em Direito Civil e do Consumidor</h3>
+                <h2>Atuação em Direito Civil e do Consumidor</h2>
             </div>
 
             <div class="services-grid">
@@ -1026,7 +1030,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
             <i class="fa-solid fa-building-columns"></i>
         </div>
 
-        <h4>Negativas de Cobertura pelo Plano de Saúde</h4>
+        <h3>Negativas de Cobertura pelo Plano de Saúde</h3>
 <p>Análise de situações em que o plano de saúde recusa a cobertura de procedimentos indicados ao paciente, considerando o contrato, a indicação médica e as circunstâncias do caso.</p>
 
 <ul class="service-list">
@@ -1047,7 +1051,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
                         <div class="service-icon">
                             <i class="fa-solid fa-file-invoice-dollar"></i>
                         </div>
-<h4>Reajustes e Cancelamentos do Plano</h4>
+<h3>Reajustes e Cancelamentos do Plano</h3>
 <p>Análise de problemas relacionados a aumentos nas mensalidades, alterações contratuais, cancelamento ou suspensão do plano de saúde, considerando as regras aplicáveis e as circunstâncias do caso.</p>
 
 <ul class="service-list">
@@ -1067,7 +1071,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
                         <div class="service-icon">
                             <i class="fa-solid fa-hospital-user"></i>
                         </div>
-<h4>O que Fazer Diante de um Problema com o Plano de Saúde</h4>
+<h3>O que Fazer Diante de um Problema com o Plano de Saúde</h3>
 <p>Reunir documentos médicos e registrar a resposta da operadora pode ser importante para compreender a situação e avaliar as medidas cabíveis, especialmente quando houver necessidade de atendimento ou tratamento.</p>
 
 <ul class="service-list">
@@ -1092,7 +1096,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
                 </div>
             </div>
             <div class="about-content">
-                <h3>Dr. Maurício Ávila</h3>
+                <h2>Dr. Maurício Ávila</h2>
                 <div class="about-oab-badge">
                     Inscrição OAB/SP nº 551.435
                 </div>
@@ -1116,25 +1120,25 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
         <div class="container">
             <div class="section-header">
                 <span>Passo a Passo</span>
-                <h3>Como Funciona o Atendimento</h3>
+                <h2>Como Funciona o Atendimento</h2>
             </div>
 
             <div class="process-grid">
                 <div class="process-card">
                     <div class="process-number">1</div>
-                    <h4>Envio das Informações</h4>
+                    <h3>Envio das Informações</h3>
                     <p>Você preenche nosso formulário rápido informando o que aconteceu e os documentos que possui.</p>
                 </div>
 
                 <div class="process-card">
                     <div class="process-number">2</div>
-                    <h4>Análise preventiva</h4>
+                    <h3>Análise preventiva</h3>
                     <p>Avaliamos a viabilidade técnica e jurídica do seu caso para verificar os seus direitos com clareza.</p>
                 </div>
 
                 <div class="process-card">
                     <div class="process-number">3</div>
-                    <h4>Atuação Estratégica</h4>
+                    <h3>Atuação Estratégica</h3>
                     <p>Iniciamos as medidas extrajudiciais ou judiciais adequadas para buscar a solução do caso e a proteção dos seus direitos.</p>
                 </div>
             </div>
@@ -1146,7 +1150,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
         <div class="container">
             <div class="section-header">
                 <span>Tire Suas Dúvidas</span>
-                <h3>Perguntas Frequentes</h3>
+                <h2>Perguntas Frequentes</h2>
             </div>
 
 <div class="faq-container">
@@ -1202,13 +1206,15 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
         </div>
     </section>
 
+    </main>
+
     <!-- FOOTER -->
     <footer>
         <div class="container">
 <div class="footer-grid">
 
     <div class="footer-brand">
-        <h4>Dr. Maurício Ávila Advocacia</h4>
+        <h2>Dr. Maurício Ávila Advocacia</h2>
 
         <p>Inscrição Ordem dos Advogados do Brasil:
             <strong>OAB/SP nº 551.435</strong>
@@ -1228,7 +1234,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
     </div>
 
     <div class="footer-links">
-        <h5>Navegação</h5>
+        <h3>Navegação</h3>
         <ul>
             <li><a href="#servicos">Áreas de Atuação</a></li>
             <li><a href="#sobre">O Advogado</a></li>
@@ -1238,7 +1244,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
     </div>
 
     <div class="footer-links">
-        <h5>Contato e Endereço</h5>
+        <h3>Contato e Endereço</h3>
 
         <p><strong>Endereço profissional:</strong><br>
         Av. Cap. Luiz Antônio Pimenta, 563<br>
@@ -1253,7 +1259,7 @@ grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
     </div>
 
     <div class="footer-links">
-        <h5>Compromisso Legal</h5>
+        <h3>Compromisso Legal</h3>
 
         <p>Atendimento pautado no Código de Ética e Disciplina da OAB. Informações protegidas com sigilo profissional e LGPD.</p>
     </div>
