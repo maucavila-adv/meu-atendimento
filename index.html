@@ -1365,11 +1365,15 @@ fetch("https://formsubmit.co/ajax/maucavila@adv.oabsp.org.br", {
     var url = "https://wa.me/" + numeroWhats +
               "?text=" + encodeURIComponent(mensagem);
     
-// Registra o clique no WhatsApp no Google Analytics
-gtag('event', 'whatsapp_click', {
-    'event_category': 'contato',
-    'event_label': 'WhatsApp'
-});
+// Mede somente a tentativa de abrir o WhatsApp, nao o envio da mensagem.
+if (typeof gtag === 'function') {
+    gtag('event', 'whatsapp_open_attempt', {
+        'event_category': 'contato',
+        'event_label': 'WhatsApp',
+        'contact_status': 'tentativa',
+        'page_path': window.location.pathname
+    });
+}
 
     window.open(url, '_blank');
 }
