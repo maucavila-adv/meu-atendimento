@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<script>
+// Exclui deste navegador os acessos de desenvolvimento, sem afetar visitantes.
+// Ativacao: ?teste_interno=ativar | Reversao: ?teste_interno=desativar
+(function () {
+    try {
+        var modo = new URLSearchParams(window.location.search).get('teste_interno');
+        if (modo === 'ativar') localStorage.setItem('mauricioavila_teste_interno', '1');
+        if (modo === 'desativar') localStorage.removeItem('mauricioavila_teste_interno');
+        if (localStorage.getItem('mauricioavila_teste_interno') === '1') {
+            window['ga-disable-G-9KKHJ7FV81'] = true;
+        }
+    } catch (erro) {
+        console.warn('Preferencia local de medicao indisponivel.', erro);
+    }
+})();
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KKHJ7FV81"></script>
 <script>
