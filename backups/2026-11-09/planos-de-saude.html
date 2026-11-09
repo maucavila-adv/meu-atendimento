@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<script>
+// Exclui deste navegador os acessos de desenvolvimento, sem afetar visitantes.
+// Ativacao: ?teste_interno=ativar | Reversao: ?teste_interno=desativar
+(function () {
+    try {
+        var modo = new URLSearchParams(window.location.search).get('teste_interno');
+        if (modo === 'ativar') localStorage.setItem('mauricioavila_teste_interno', '1');
+        if (modo === 'desativar') localStorage.removeItem('mauricioavila_teste_interno');
+        if (localStorage.getItem('mauricioavila_teste_interno') === '1') {
+            window['ga-disable-G-9KKHJ7FV81'] = true;
+        }
+    } catch (erro) {
+        console.warn('Preferencia local de medicao indisponivel.', erro);
+    }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9KKHJ7FV81"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9KKHJ7FV81');
+</script>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advogado para Planos de Saúde em São Vicente | Maurício Ávila</title>
+    <meta name="description" content="Advogado para planos de saúde em São Vicente e Baixada Santista. Análise de negativa de cobertura, cirurgia, tratamento, reembolso, junta médica, reajuste e cancelamento.">
+   <link rel="canonical" href="https://mauricioavila.adv.br/planos-de-saude.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "Dr. Maurício Ávila Advocacia",
+      "url": "https://mauricioavila.adv.br/planos-de-saude.html",
+      "telephone": "+55 13 99174-9820",
+      "email": "maucavila@adv.oabsp.org.br",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Cap. Luiz Antônio Pimenta, 563, Parque Bitaru",
+        "addressLocality": "São Vicente",
+        "addressRegion": "SP",
+        "postalCode": "11330-200",
+        "addressCountry": "BR"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "São Vicente"},
+        {"@type": "AdministrativeArea", "name": "Baixada Santista"}
+      ],
+      "serviceType": [
+        "Planos de saúde",
+        "Negativa de cobertura",
+        "Negativa de cirurgia",
+        "Negativa de tratamento",
+        "Reembolso de despesas médicas",
+        "Junta médica",
+        "Reajuste de plano de saúde",
+        "Cancelamento de plano de saúde"
+      ]
+    }
+    </script>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=optional"></noscript>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <style>
+        :root {
+            --primary-navy: #0b1d3a;
+            --primary-dark: #071326;
+            --accent-gold: #c5a059;
+            --accent-gold-hover: #b08d46;
+            --accent-green: #25d366;
+            --accent-green-hover: #1ebc57;
+            --bg-light: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* ----- TOPBAR ----- */
+        .topbar {
+            background-color: var(--primary-dark);
+            color: #d1d5db;
+            font-size: 0.85rem;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .topbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .topbar-info item, .topbar-info span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .topbar a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        /* ----- CONTAINER ----- */
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ----- HEADER / NAVBAR ----- */
+        header {
+            background-color: var(--primary-navy);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            padding: 15px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--accent-gold), #8a6d3b);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(197, 160, 89, 0.3);
+        }
+
+        .brand-text .brand-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.25rem;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            font-weight: 700;
+        }
+
+        .brand-text span {
+            font-size: 0.75rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: block;
+            margin-top: -2px;
+        }
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    align-items: center;
+    margin: 0 28px;
+}
+
+        .nav-links a {
+            color: #e5e7eb;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+          white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .btn-header {
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: 14px;
+        }
+
+        .btn-header:hover {
+            background-color: var(--accent-gold-hover);
+            transform: translateY(-2px);
+        }
+
+        /* ----- HERO SECTION ----- */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-navy) 100%);
+            color: #ffffff;
+            padding: 60px 0 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background: radial-gradient(circle at 80% 20%, rgba(197, 160, 89, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(197, 160, 89, 0.15);
+            border: 1px solid rgba(197, 160, 89, 0.4);
+            color: var(--accent-gold);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.3rem;
+            line-height: 1.25;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .hero-content h1 span {
+            color: var(--accent-gold);
+        }
+
+        .hero-content p {
+            font-size: 1.05rem;
+            color: #d1d5db;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .hero-bullets {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .hero-bullets li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: #e5e7eb;
+        }
+
+        .hero-bullets li i {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+        }
+
+        /* ----- FORM CONTAINER CARD ----- */
+        .form-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            color: var(--text-main);
+            border-top: 5px solid var(--accent-gold);
+            position: relative;
+        }
+
+        .form-card-header {
+            text-align: center;
+            margin-bottom: 22px;
+        }
+
+        .form-card-header h2 {
+            font-size: 1.35rem;
+            color: var(--primary-navy);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .form-card-header p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            background-color: #fafafa;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus, 
+        .form-group select:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--accent-green);
+            color: #ffffff;
+            border: none;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--accent-green-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .form-footer-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        /* ----- TRUST STRIP ----- */
+        .trust-strip {
+            background-color: #ffffff;
+            padding: 25px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .trust-item i {
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+        }
+
+        .trust-item div {
+            text-align: left;
+        }
+
+        .trust-item h3 {
+            font-size: 0.95rem;
+            color: var(--primary-navy);
+            font-weight: 700;
+        }
+
+        .trust-item p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* ----- SERVICES SECTION ----- */
+        .services {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+        }
+
+        .section-header span {
+            color: #80601f;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .section-header h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--primary-navy);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 35px 25px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            border-color: var(--accent-gold);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(11, 29, 58, 0.05);
+            color: var(--primary-navy);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--primary-navy);
+            color: var(--accent-gold);
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary-navy);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .service-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .service-list li {
+            font-size: 0.88rem;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .service-list li i {
+            color: var(--accent-green);
+            font-size: 0.8rem;
+        }
+
+        .service-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 12px;
+            background: rgba(11, 29, 58, 0.05);
+            color: var(--primary-navy);
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.88rem;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover .service-btn {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+        }
+
+        /* ----- ABOUT SECTION ----- */
+        .about {
+            background-color: #ffffff;
+            padding: 80px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image-frame {
+            width: 100%;
+            max-width: 360px;
+            height: 440px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border: 4px solid var(--accent-gold);
+            background-color: var(--primary-navy);
+        }
+
+        .about-image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-content h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--primary-navy);
+            margin-bottom: 5px;
+        }
+
+        .about-oab-badge {
+            display: inline-block;
+            background-color: rgba(197, 160, 89, 0.15);
+            border: 1px solid var(--accent-gold);
+            color: var(--primary-navy);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            font-size: 0.98rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .about-check {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: var(--primary-navy);
+        }
+
+        .about-check i {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+        }
+
+        /* ----- PROCESS SECTION ----- */
+        .process {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            position: relative;
+        }
+
+        .process-card {
+            background: #ffffff;
+            padding: 35px 25px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            position: relative;
+        }
+
+        .process-number {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            font-weight: 800;
+            font-size: 1.2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+        }
+
+        .process-card h3 {
+            font-size: 1.15rem;
+            color: var(--primary-navy);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .process-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* ----- FAQ SECTION ----- */
+        .faq {
+            background-color: #ffffff;
+            padding: 80px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: #ffffff;
+            padding: 18px 20px;
+            text-align: left;
+            border: none;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #f9fafb;
+        }
+
+        .faq-answer {
+            padding: 0 20px 18px 20px;
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            display: none;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+            color: var(--accent-gold);
+        }
+
+        /* ----- FOOTER ----- */
+        footer {
+            background-color: var(--primary-dark);
+            color: #9ca3af;
+            padding: 60px 0 30px 0;
+            font-size: 0.88rem;
+        }
+
+        .footer-grid {
+            display: grid;
+grid-template-columns: 1.5fr 0.9fr 1.2fr 1fr;            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            font-family: 'Cinzel', serif;
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .footer-brand p {
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .footer-links h3 {
+            color: #ffffff;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #cbd5e1;
+        }
+
+        /* ----- FLOATING WHATSAPP BUTTON ----- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent-green);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+            z-index: 9999;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: var(--accent-green-hover);
+        }
+
+        /* ----- RESPONSIVE / MEDIA QUERIES ----- */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+.services-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.process-grid {
+    grid-template-columns: 1fr;
+}            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .trust-grid {
+            grid-template-columns: 1fr;
+            }    
+           .services-grid {
+            grid-template-columns: 1fr;
+            }
+            .topbar {
+                display: none;
+            }
+        }
+        .mobile-menu-toggle { display: none; background: transparent; border: 1px solid rgba(255,255,255,.45); color: #fff; border-radius: 8px; padding: 10px 12px; cursor: pointer; font-size: 1.15rem; }
+        @media (max-width: 992px) {
+            .mobile-menu-toggle { display: inline-flex; align-items: center; justify-content: center; margin-left: auto; margin-right: 12px; }
+            .navbar { flex-wrap: wrap; }
+            .nav-links.is-open { display: flex; flex-direction: column; order: 4; flex-basis: 100%; width: 100%; gap: 0; padding: 12px 0 4px; }
+            .nav-links.is-open li { width: 100%; }
+            .nav-links.is-open a { display: block; padding: 12px 8px; }
+        }
+    
+        /* Cabeçalho compacto para telas pequenas */
+        @media (max-width: 600px) {
+            header .navbar { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 12px 10px; align-items: center; padding-top: 14px; padding-bottom: 14px; }
+            header .brand { grid-column: 1; grid-row: 1; min-width: 0; gap: 9px; }
+            header .brand-icon { width: 42px; height: 42px; flex: 0 0 42px; }
+            header .brand-text { min-width: 0; }
+            header .brand-text .brand-name { font-size: clamp(.9rem,3.4vw,1.15rem); line-height: 1.2; letter-spacing: 0; }
+            header .brand-text span { font-size: .52rem; line-height: 1.35; letter-spacing: .35px; margin-top: 3px; }
+            header .mobile-menu-toggle { grid-column: 2; grid-row: 1; margin: 0; padding: 9px 11px; }
+            header .btn-header { grid-column: 1 / -1; grid-row: 2; justify-content: center; width: 100%; margin: 0; padding: 12px 14px; }
+            header .nav-links.is-open { grid-column: 1 / -1; grid-row: 3; margin: 0; min-width: 0; }
+            .hero { padding-top: 35px; }
+        }
+</style>
+</head>
+<body>
+
+<!-- HEADER / NAVBAR -->
+    <header>
+        <div class="container navbar">
+            <a href="#" class="brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <div class="brand-text">
+                    <div class="brand-name">DR. MAURÍCIO ÁVILA</div>
+                    <span>DR. MAURÍCIO ÁVILA ADVOCACIA | DIREITO CIVIL E DO CONSUMIDOR</span>
+                </div>
+            </a>
+            <button type="button" class="mobile-menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal" onclick="alternarMenu(this)"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+            <ul class="nav-links" id="menu-principal">
+    <li><a href="/" aria-label="Página inicial" title="Página inicial"><i class="fa-solid fa-house"></i></a></li>
+    <li><a href="/#servicos">Áreas de Atuação</a></li>
+   <li><a href="/#sobre">O Advogado</a></li>
+    <li><a href="/#como-funciona">Como Funciona</a></li>
+    <li><a href="#faq">Dúvidas</a></li>
+</ul>
+            <a href="#formulario" class="btn-header">
+                <i class="fa-solid fa-paper-plane"></i> Analisar meu caso
+            </a>
+        </div>
+    </header>
+
+    <main id="conteudo-principal">
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+<div class="hero-badge">
+    <i class="fa-solid fa-gavel"></i> Direito Civil e Direito do Consumidor
+</div>
+
+<h1>Advogado para Planos de Saúde <span>em São Vicente e Baixada Santista</span></h1>
+<p><strong>Dr. Maurício Ávila Advocacia</strong> atua em São Vicente e Baixada Santista na análise de problemas envolvendo planos de saúde, incluindo negativas de cobertura, exames, cirurgias, tratamentos, medicamentos, pedidos de reembolso, divergências ou junta médica, reajustes e cancelamentos. O atendimento também pode ser realizado 100% online.</p>
+<ul class="hero-bullets">    
+<li><i class="fa-solid fa-circle-check"></i> Negativa de exames, cirurgias e tratamentos</li>
+<li><i class="fa-solid fa-circle-check"></i> Reembolso, junta médica, reajustes e cancelamentos</li>
+<li><i class="fa-solid fa-circle-check"></i> Análise do caso e das medidas cabíveis</li>
+</ul>
+            </div>
+
+            <!-- FORMULÁRIO DE CAPTURA INTEGRAÇAO WHATSAPP -->
+            <div class="form-card" id="formulario">
+                <div class="form-card-header">
+                    <h2>Análise inicial do seu caso</h2>
+                    <p>Preencha os dados abaixo para receber uma orientação jurídica direta pelo WhatsApp.</p>
+                </div>
+
+                <form id="leadForm">
+                    <div class="form-group">
+                        <label for="nome"><i class="fa-solid fa-user"></i> Seu Nome Completo:</label>
+                        <input type="text" id="nome" placeholder="Ex.: Maria Silva" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefoneCliente"><i class="fa-brands fa-whatsapp"></i> Seu Telefone / WhatsApp com DDD:</label>
+                        <input type="tel" id="telefoneCliente" placeholder="Ex.: (11) 99999-9999" required>
+                    </div>
+
+                    <div class="form-group">
+  <label for="problema"><i class="fa-solid fa-circle-exclamation"></i> Qual é o problema com o plano de saúde?</label>
+<select id="problema" required>
+    <option value="">Selecione a situação...</option>
+    <option value="Negativa de exame">Negativa de exame</option>
+    <option value="Negativa de cirurgia">Negativa de cirurgia</option>
+    <option value="Negativa de tratamento">Negativa de tratamento</option>
+    <option value="Negativa de medicamento">Negativa de medicamento</option>
+    <option value="Reajuste do plano de saúde">Reajuste do plano de saúde</option>
+    <option value="Cancelamento ou suspensão do plano">Cancelamento ou suspensão do plano</option>
+    <option value="Outro problema com plano de saúde">Outro problema com plano de saúde</option>
+</select>
+                    </div>
+
+                    <div class="form-group">
+<label for="documentos"><i class="fa-solid fa-file-contract"></i> Quais documentos ou comprovantes você possui?</label>
+<select id="documentos" required>
+    <option value="">Selecione uma opção...</option>
+    <option value="Tenho a negativa do plano por escrito">Tenho a negativa do plano por escrito</option>
+    <option value="Tenho pedido ou relatório médico">Tenho pedido ou relatório médico</option>
+    <option value="Tenho negativa e documentos médicos">Tenho a negativa e documentos médicos</option>
+    <option value="Tenho boletos ou comprovantes do reajuste">Tenho boletos ou comprovantes do reajuste</option>
+    <option value="Tenho protocolos ou mensagens do plano">Tenho protocolos ou mensagens do plano</option>
+    <option value="Tenho apenas alguns documentos">Tenho apenas alguns documentos</option>
+    <option value="Ainda não reuni os documentos">Ainda não reuni os documentos</option>
+</select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="detalhes"><i class="fa-solid fa-align-left"></i> Resumo Rápido do Caso:</label>
+  <textarea id="detalhes" rows="3" placeholder="Conte brevemente o que aconteceu, qual procedimento, exame, tratamento ou medicamento foi solicitado, qual foi a resposta do plano de saúde e se existe alguma urgência médica..." required></textarea>
+
+                    <button type="button" class="btn-submit" onclick="enviarWhatsApp()">
+                        <i class="fa-brands fa-whatsapp"></i> Analisar pelo WhatsApp
+                    </button>
+                </form>
+
+                <div class="form-footer-note">
+                    <i class="fa-solid fa-lock"></i> Seus dados são tratados com segurança e conforme a LGPD.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust-strip">
+        <div class="container trust-grid">
+            <div class="trust-item">
+                <i class="fa-solid fa-laptop-medical"></i>
+                <div>
+                    <h3>Atendimento Digital</h3>
+                    <p>Sem sair de casa</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-user-shield"></i>
+                <div>
+                    <h3>Análise personalizada</h3>
+                    <p>Foco na sua dor real</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-gavel"></i>
+                <div>
+                    <h3>Atuação em Direito Civil e do Consumidor</h3>
+                    <p>Contratos, imóveis, família, Bancos e Saúde</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-bolt"></i>
+                <div>
+                    <h3>Atendimento Objetivo</h3>
+                    <p>Análise clara de cada situação</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <span>Áreas de Atuação</span>
+                <h2>Atuação em Direito Civil e do Consumidor</h2>
+            </div>
+
+            <div class="services-grid">
+<!-- CARD 1 -->
+<div class="service-card">
+    <div>
+        <div class="service-icon">
+            <i class="fa-solid fa-building-columns"></i>
+        </div>
+
+        <h3>Negativas de Cobertura pelo Plano de Saúde</h3>
+<p>Análise de situações em que o plano de saúde recusa a cobertura de procedimentos indicados ao paciente, considerando o contrato, a indicação médica e as circunstâncias do caso.</p>
+
+<ul class="service-list">
+    <li><i class="fa-solid fa-check"></i> Negativa de exames</li>
+    <li><i class="fa-solid fa-check"></i> Negativa de cirurgias</li>
+    <li><i class="fa-solid fa-check"></i> Negativa de tratamentos</li>
+    <li><i class="fa-solid fa-check"></i> Negativa de medicamentos</li>
+    <li><i class="fa-solid fa-check"></i> Reembolso e divergência ou junta médica</li>
+</ul>
+    </div>
+
+    <a href="#formulario" class="service-btn">
+        <i class="fa-brands fa-whatsapp"></i> Avaliar meu caso
+    </a>
+</div>                                 <!-- CARD 2 -->
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                        </div>
+<h3>Reajustes e Cancelamentos do Plano</h3>
+<p>Análise de problemas relacionados a aumentos nas mensalidades, alterações contratuais, cancelamento ou suspensão do plano de saúde, considerando as regras aplicáveis e as circunstâncias do caso.</p>
+
+<ul class="service-list">
+    <li><i class="fa-solid fa-check"></i> Reajustes da mensalidade</li>
+    <li><i class="fa-solid fa-check"></i> Aumento por faixa etária</li>
+    <li><i class="fa-solid fa-check"></i> Cancelamento do plano</li>
+    <li><i class="fa-solid fa-check"></i> Suspensão da cobertura</li>
+</ul>
+
+</div>
+<a href="#formulario" class="service-btn"><i class="fa-brands fa-whatsapp"></i> Avaliar meu caso</a>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon">
+                            <i class="fa-solid fa-hospital-user"></i>
+                        </div>
+<h3>O que Fazer Diante de um Problema com o Plano de Saúde</h3>
+<p>Reunir documentos médicos e registrar a resposta da operadora pode ser importante para compreender a situação e avaliar as medidas cabíveis, especialmente quando houver necessidade de atendimento ou tratamento.</p>
+
+<ul class="service-list">
+    <li><i class="fa-solid fa-check"></i> Solicitar a negativa por escrito</li>
+    <li><i class="fa-solid fa-check"></i> Guardar pedidos e relatórios médicos</li>
+    <li><i class="fa-solid fa-check"></i> Registrar protocolos com a operadora</li>
+    <li><i class="fa-solid fa-check"></i> Buscar orientação jurídica sobre o caso</li>
+</ul>
+                    </div>
+                    <a href="#formulario" class="service-btn"><i class="fa-brands fa-whatsapp"></i> Avaliar meu caso</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="sobre">
+        <div class="container about-grid">
+            <div class="about-image-box">
+                <div class="about-image-frame">
+                    <img src="Eu.jpg" alt="Dr. Maurício Ávila" loading="lazy" decoding="async">
+                </div>
+            </div>
+            <div class="about-content">
+                <h2>Dr. Maurício Ávila</h2>
+                <div class="about-oab-badge">
+                    Inscrição OAB/SP nº 551.435
+                </div>
+<p>Advogado com atuação em Direito Civil e do Consumidor, com atendimento em São Vicente e Baixada Santista. Na área de planos de saúde, atua na análise de casos envolvendo negativas de cobertura, exames, cirurgias, tratamentos, medicamentos, reembolso, divergências ou junta médica, reajustes e cancelamentos.</p>
+
+<p>O atendimento busca analisar a documentação médica, a resposta da operadora, as condições do plano e as circunstâncias do caso, orientando o cliente sobre as medidas administrativas ou judiciais cabíveis.</p>
+                <div class="about-highlights">
+<div class="about-check"><i class="fa-solid fa-check-double"></i> Atendimento 100% Online</div>
+<div class="about-check"><i class="fa-solid fa-check-double"></i> Sigilo e Proteção de Dados</div>
+<div class="about-check"><i class="fa-solid fa-check-double"></i> Atendimento Jurídico Personalizado</div>
+<div class="about-check"><i class="fa-solid fa-check-double"></i> Orientação Clara e Direta</div>
+                </div>
+
+                <p><i class="fa-solid fa-envelope" style="color: var(--accent-gold);"></i> <strong>E-mail:</strong> <a href="mailto:maucavila@adv.oabsp.org.br" style="color: var(--primary-navy); text-decoration: none; font-weight: 600;">maucavila@adv.oabsp.org.br</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process" id="como-funciona">
+        <div class="container">
+            <div class="section-header">
+                <span>Passo a Passo</span>
+                <h2>Como Funciona o Atendimento</h2>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">1</div>
+                    <h3>Envio das Informações</h3>
+                    <p>Você preenche nosso formulário rápido informando o que aconteceu e os documentos que possui.</p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-number">2</div>
+                    <h3>Análise preventiva</h3>
+                    <p>Avaliamos a viabilidade técnica e jurídica do seu caso para verificar os seus direitos com clareza.</p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-number">3</div>
+                    <h3>Atuação Estratégica</h3>
+                    <p>Iniciamos as medidas extrajudiciais ou judiciais adequadas para buscar a solução do caso e a proteção dos seus direitos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span>Tire Suas Dúvidas</span>
+                <h2>Perguntas Frequentes</h2>
+            </div>
+
+<div class="faq-container">
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+    <span>O plano de saúde negou um exame, cirurgia ou tratamento. O que devo fazer?</span>
+    <i class="fa-solid fa-chevron-down"></i>
+</button>
+<div class="faq-answer">
+    <p>Peça à operadora a negativa por escrito e guarde o pedido, relatório ou prescrição médica. Também é importante conservar protocolos, mensagens e demais documentos relacionados ao atendimento. Com essas informações, é possível analisar o motivo da recusa e avaliar as medidas cabíveis para o caso.</p>
+</div>
+</div>
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+    <span>O plano de saúde pode negar um tratamento indicado pelo médico?</span>
+    <i class="fa-solid fa-chevron-down"></i>
+</button>
+<div class="faq-answer">
+    <p>A possibilidade de recusa depende das circunstâncias do caso, do contrato, da indicação médica e das regras aplicáveis ao plano de saúde. Uma negativa não deve ser analisada isoladamente. É importante obter a justificativa da operadora por escrito e verificar a documentação médica para avaliar se a recusa pode ser contestada.</p>
+</div>
+</div>
+<div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+    <span>O que fazer quando o plano de saúde nega um procedimento urgente?</span>
+    <i class="fa-solid fa-chevron-down"></i>
+</button>
+<div class="faq-answer">
+    <p>Em situações de urgência, é importante reunir rapidamente o pedido ou relatório médico, a justificativa da urgência e a negativa da operadora, sempre que possível por escrito. Dependendo das circunstâncias, pode ser necessária a adoção de medida judicial urgente para que o caso seja analisado em tempo compatível com a necessidade do paciente.</p>
+</div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+    <span>O plano negou reembolso ou abriu divergência ou junta médica. O que devo fazer?</span>
+    <i class="fa-solid fa-chevron-down"></i>
+</button>
+<div class="faq-answer">
+    <p>Guarde o pedido médico, relatório assistencial, negativa ou comunicação da operadora, protocolos e comprovantes de despesas, quando houver. Em casos de divergência ou junta médica, também é importante conservar toda a comunicação sobre os profissionais indicados e os prazos informados. A documentação permite avaliar se a conduta da operadora pode ser questionada no caso concreto.</p>
+</div>
+</div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+    <span>Quais documentos devo guardar para analisar um problema com o plano de saúde?</span>
+    <i class="fa-solid fa-chevron-down"></i>
+</button>
+<div class="faq-answer">
+    <p>Guarde o pedido ou relatório médico, prescrições, exames, carteirinha do plano, contrato quando disponível, comprovantes de pagamento, protocolos de atendimento, mensagens, e-mails e a eventual negativa da operadora por escrito. Esses documentos ajudam a compreender o caso e avaliar as medidas cabíveis.</p>
+</div>
+</div>
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+            Como organizar os documentos após uma negativa de cirurgia pelo plano de saúde?
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="faq-answer">
+            <p>Reúna a solicitação e o relatório do médico, a justificativa da negativa fornecida pela operadora, os protocolos e os exames relacionados ao procedimento. Se houver urgência, peça ao médico que descreva a condição clínica e os riscos associados à espera. Esses documentos permitem avaliar a situação concreta, inclusive a necessidade de providências urgentes.</p>
+        </div>
+    </div>
+
+</div>            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+<div class="footer-grid">
+
+    <div class="footer-brand">
+        <h2>Dr. Maurício Ávila Advocacia</h2>
+
+        <p>Inscrição Ordem dos Advogados do Brasil:
+            <strong>OAB/SP nº 551.435</strong>
+        </p>
+
+        <p><strong>Direito Civil e do Consumidor</strong></p>
+
+        <p>Atendimento realizado em conjunto com o escritório
+            <strong>Martins & Advogados</strong>.
+        </p>
+
+        <p>E-mail Oficial:
+            <a href="mailto:maucavila@adv.oabsp.org.br" style="color: var(--accent-gold);">
+                maucavila@adv.oabsp.org.br
+            </a>
+        </p>
+    </div>
+
+    <div class="footer-links">
+        <h3>Navegação</h3>
+        <ul>
+            <li><a href="#servicos">Áreas de Atuação</a></li>
+            <li><a href="#sobre">O Advogado</a></li>
+            <li><a href="#como-funciona">Como Funciona</a></li>
+            <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-links">
+        <h3>Contato e Endereço</h3>
+
+        <p><strong>Endereço profissional:</strong><br>
+        Av. Cap. Luiz Antônio Pimenta, 563<br>
+        Parque Bitaru, São Vicente - SP<br>
+        CEP 11330-200</p>
+
+        <p><strong>WhatsApp Dr. Maurício:</strong><br>
+        (13) 99174-9820</p>
+
+        <p><strong>WhatsApp Martins & Advogados:</strong><br>
+        (13) 99114-3427</p>
+    </div>
+
+    <div class="footer-links">
+        <h3>Compromisso Legal</h3>
+
+        <p>Atendimento pautado no Código de Ética e Disciplina da OAB. Informações protegidas com sigilo profissional e LGPD.</p>
+    </div>
+
+</div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; Todos os direitos reservados — Dr. Maurício Ávila Advocacia (OAB/SP nº 551.435)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="#formulario" class="whatsapp-float" title="Falar pelo WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPT DE ENVIO DO FORMULÁRIO -->
+    <script>
+       function toggleFaq(button) {
+    const faqItem = button.closest('.faq-item');
+    const estavaAberto = faqItem.classList.contains('active');
+
+    document.querySelectorAll('.faq-item').forEach(function(item) {
+        item.classList.remove('active');
+    });
+
+    if (!estavaAberto) {
+        faqItem.classList.add('active');
+    }
+}
+
+  function enviarWhatsApp() {
+    var nome = document.getElementById('nome').value;
+    var telefone = document.getElementById('telefoneCliente').value;
+    var problema = document.getElementById('problema').value;
+    var documentos = document.getElementById('documentos').value;
+    var detalhes = document.getElementById('detalhes').value;
+
+    // Valida os dados antes de abrir o WhatsApp ou enviar a copia por e-mail.
+    nome = nome.trim();
+    telefone = telefone.trim();
+    problema = problema.trim();
+    documentos = documentos.trim();
+    detalhes = detalhes.trim();
+
+    function informarCampo(id, mensagem) {
+        alert(mensagem);
+        document.getElementById(id).focus();
+    }
+
+    if (!nome) {
+        informarCampo('nome', 'Por favor, informe seu nome.');
+        return;
+    }
+    var digitosTelefone = telefone.replace(/\D/g, '');
+    if (!/^(?:[1-9][0-9])9?[0-9]{8}$/.test(digitosTelefone)) {
+        informarCampo('telefoneCliente', 'Informe um telefone com DDD válido (10 ou 11 dígitos).');
+        return;
+    }
+    if (!problema) {
+        informarCampo('problema', 'Por favor, selecione o assunto do atendimento.');
+        return;
+    }
+    var campoDocumentos = document.getElementById('documentos');
+    if (campoDocumentos.required && !documentos) {
+        informarCampo('documentos', 'Por favor, selecione uma opção sobre os documentos.');
+        return;
+    }
+    if (!detalhes) {
+        informarCampo('detalhes', 'Por favor, descreva brevemente seu caso.');
+        return;
+    }
+
+    var mensagem = "*NOVA CONSULTA VIA SITE*\n\n" +
+                   "*Nome:* " + nome + "\n" +
+                   "*Telefone:* " + telefone + "\n" +
+                   "*Assunto:* " + problema + "\n" +
+                   "*Documentos:* " + documentos + "\n" +
+                   "*Resumo:* " + detalhes;
+
+// ENVIA UMA CÓPIA PARA O E-MAIL
+fetch("https://formsubmit.co/ajax/maucavila@adv.oabsp.org.br", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    },
+    body: JSON.stringify({
+        _subject: "Novo atendimento pelo site - " + nome,
+        Origem: "mauricioavila.adv.br",
+        Nome: nome,
+        Telefone: telefone,
+        Assunto: problema,
+        Documentos: documentos,
+        Resumo: detalhes
+    })
+})
+.then(function(response) {
+    if (!response.ok) {
+        throw new Error("Falha HTTP ao solicitar a copia por e-mail: " + response.status);
+    }
+    return response.json();
+})
+.then(function(data) {
+    if (data.success !== true && data.success !== "true") {
+        throw new Error("O servico de e-mail nao confirmou o recebimento da solicitacao.");
+    }
+    console.log("Solicitacao de copia por e-mail aceita pelo servico.");
+    // Aceite da solicitacao pelo servico, nao confirmacao de entrega na caixa postal.
+    if (typeof gtag === 'function') {
+        gtag('event', 'form_email_request_accepted', {page_path: window.location.pathname});
+    }
+})
+.catch(function(error) {
+    console.error("Falha na copia por e-mail:", error);
+    if (typeof gtag === 'function') {
+        gtag('event', 'form_email_request_failed', {page_path: window.location.pathname});
+    }
+    alert("Nao foi possivel confirmar o envio da copia por e-mail. Continue o atendimento pelo WhatsApp e envie a mensagem para o escritorio.");
+});
+
+    // ABRE O WHATSAPP
+    var numeroWhats = "5513991749820";
+    var url = "https://wa.me/" + numeroWhats +
+              "?text=" + encodeURIComponent(mensagem);
+    
+// Mede somente a tentativa de abrir o WhatsApp, nao o envio da mensagem.
+if (typeof gtag === 'function') {
+    gtag('event', 'whatsapp_open_attempt', {
+        'event_category': 'contato',
+        'event_label': 'WhatsApp',
+        'contact_status': 'tentativa',
+        'page_path': window.location.pathname
+    });
+}
+
+    window.open(url, '_blank');
+}
+</script>
+    <script>
+    function alternarMenu(botao) {
+        var menu = document.getElementById('menu-principal');
+        var aberto = menu.classList.toggle('is-open');
+        botao.setAttribute('aria-expanded', String(aberto));
+        botao.setAttribute('aria-label', aberto ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+    }
+    document.getElementById('menu-principal').addEventListener('click', function(evento) {
+        if (evento.target.closest('a')) {
+            this.classList.remove('is-open');
+            var botao = document.querySelector('.mobile-menu-toggle');
+            botao.setAttribute('aria-expanded', 'false');
+            botao.setAttribute('aria-label', 'Abrir menu de navegação');
+        }
+    });
+    </script>
+</body>
+</html>
